@@ -1,0 +1,1198 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cita Express — Demo educativa</title><style>
+:root{--wine:#7b1438;--blue:#0b5792;--blue2:#23558f;--gold:#b18b31;--green:#27ad4b;--ink:#24262a;--line:#d7d9dc;--pale:#f6f7f9}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}.demo{position:sticky;top:0;z-index:99;text-align:center;background:#111;color:#fff;padding:9px;font-weight:700;font-size:13px}.gov{height:110px;background:var(--wine);color:white;display:flex;align-items:center;justify-content:space-between;padding:0 6%;font-family:Georgia,serif}.gov strong{font-size:26px;letter-spacing:.5px}.seal{width:58px;height:58px;border:2px solid #d6b988;border-radius:50%;display:grid;place-items:center;color:#d6b988;font-weight:700}.brand{display:flex;align-items:center;gap:15px}.hamb{font-size:42px}.sre-wrap{background:#b18b31;padding:5px 5%}.sre{background:#07604e;color:#f3e8ca;min-height:90px;display:flex;align-items:center;padding:12px 20px;font-family:Georgia,serif}.sre-logo{width:54px;height:54px;object-fit:contain;flex:0 0 auto;margin-right:18px}.sre-text{display:flex;flex-direction:column;justify-content:center;line-height:1.05}.sre-title{font-weight:700;font-size:30px;letter-spacing:1px}.sre-subtitle{margin-top:7px;color:#d6b35f;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}.page{max-width:760px;margin:auto;padding:45px 28px 80px}.hero{text-align:center}.hero h1{font-size:42px;margin:12px 0 20px}.watermark{width:220px;height:220px;border:5px double #d8c08c;border-radius:50%;margin:0 auto 10px;display:grid;place-items:center;color:#cdb477;font-family:Georgia,serif;font-size:26px;opacity:.7}.hero h2{font-size:42px;color:var(--wine);margin:8px 0}.hero p{font-size:27px;margin:0 0 55px}.rule{height:1px;background:#eee;margin:20px 0 45px}.bigbtn{width:100%;border:0;border-radius:14px;background:var(--wine);color:#fff;padding:25px 18px;font-size:27px;font-weight:800;margin:0 0 28px;cursor:pointer}.info{background:#f7f8fb;border-left:6px solid #1467a4;border-radius:0 14px 14px 0;padding:28px 30px;font-size:24px;line-height:1.5}.terms{text-align:center;color:#666;font-size:22px;line-height:1.55;margin:48px 10px}.terms a{color:#2676f3}.screen{display:none}.screen.active{display:block}.title{text-align:center}.title h1{font-size:45px;margin:15px 0 10px}.title p{font-size:31px;margin:0 0 22px}.notice{background:#cff4ff;border:1px solid #77dff4;border-radius:12px;padding:22px;text-align:center;color:#17556c;font-size:20px;line-height:1.5;margin:20px 0 34px}.card{border:2px solid #d5d5d5;border-radius:12px;overflow:hidden;margin:20px 0;background:white}.cardhead{background:var(--blue2);color:#fff;text-align:center;font-size:28px;font-weight:800;padding:20px}.cardbody{padding:35px 28px}.label{text-align:center;font-size:28px;margin-bottom:15px}.field{width:100%;border:2px solid #d9dde2;border-radius:12px;padding:18px 20px;font-size:25px;margin-bottom:30px;background:white}.field:focus{outline:4px solid #bcd8ff;border-color:#5c9cff}.actions{display:flex;flex-direction:column;align-items:center;gap:10px;margin:55px 0}.back{border:0;background:#7e858c;color:#fff;border-radius:14px;padding:17px 35px;font-size:28px}.continue{width:100%;border:3px solid #9d3454;background:#fff;color:#9d3454;padding:17px;font-size:26px}.confirm-title{text-align:center;font-size:48px;font-weight:800;line-height:1.05}.greenbox{background:#dff4d7;border:1px solid #c1e8b8;border-radius:12px;padding:28px;font-size:23px;line-height:1.45;color:#357b39}.paybox{background:#fafafa;border-radius:10px;padding:35px 45px;font-size:25px;line-height:1.55;margin:25px 0}.warning{background:#fff8df;border:1px solid #efd98a;border-radius:12px;padding:30px;text-align:center;color:#8b6a22;font-size:25px;line-height:1.45;font-weight:800}.paychoice{border:2px solid #d6d6d6;border-radius:12px;text-align:center;padding:45px 20px;margin:30px 0;font-size:30px;font-weight:800}.fake-logo{font-size:64px;color:#28449b;margin-top:20px}.timer{text-align:center;background:#eef0f4;border-radius:10px;color:#075793;font-size:36px;font-weight:800;padding:20px;margin:25px 0}.step{background:var(--green);color:white;text-align:center;border-radius:12px;padding:40px 25px;font-size:27px;line-height:1.45}.bankhead{background:var(--blue);color:#fff;border-radius:12px 12px 0 0;padding:38px;text-align:center;font-size:28px;font-weight:800;margin-top:30px}.fakebank{border:2px solid #e1e3e6;text-align:center;padding:30px;font-size:23px}.fakebank b{font-size:28px}.amount{display:grid;grid-template-columns:1fr 1fr}.amount>div{border:1px solid #ddd;padding:28px;text-align:center;font-size:23px}.amount>div:last-child{background:var(--green);color:white}.formhead{background:var(--blue);color:white;text-align:center;padding:38px 20px;font-size:29px;line-height:1.4;border-radius:12px 12px 0 0;margin-top:35px}.form{border:1px solid #ddd;padding:35px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:25px}.form label{display:block;font-size:22px;margin-bottom:8px}.form input{width:100%;padding:16px;border:2px solid #dfe2e5;border-radius:10px;font-size:20px;margin-bottom:25px}.disabled{display:block;margin:10px auto 30px;background:#85aac8;color:white;border:0;border-radius:12px;padding:20px 35px;font-size:26px;font-weight:800}.longwarn{background:#fff3c9;border:1px solid #f0d36d;border-radius:12px;padding:30px;text-align:center;color:#76570c;font-size:20px;line-height:1.55;margin:28px 0}.accordion{background:#075793;color:white;border-radius:10px;padding:22px 30px;font-size:25px;font-weight:800;margin-top:35px}.modal{display:none;position:fixed;inset:0;background:#000b;z-index:100;align-items:center;justify-content:center;padding:25px}.modal.show{display:flex}.modalbox{background:white;max-width:620px;border-radius:28px;padding:50px 45px;text-align:center;position:relative}.modalbox h2{font-size:34px}.modalbox p{font-size:23px;line-height:1.55;color:#5b5b5b}.modalbox button{width:100%;background:var(--wine);color:#fff;border:0;border-radius:12px;padding:20px;font-size:24px;font-weight:800}.close{position:absolute;right:25px;top:18px;font-size:34px;color:#999;cursor:pointer}@media(max-width:600px){.sre-logo{width:44px;height:44px;margin-right:12px}.sre-title{font-size:22px}.sre-subtitle{font-size:9px;letter-spacing:1px}.gov{height:92px}.gov strong{font-size:20px}.seal{width:48px;height:48px}.sre{font-size:24px;min-height:75px}.page{padding:35px 20px 65px}.hero h1{font-size:36px}.watermark{width:190px;height:190px}.hero h2{font-size:36px}.hero p{font-size:23px}.bigbtn{font-size:23px}.info{font-size:20px}.title h1{font-size:37px}.title p{font-size:27px}.confirm-title{font-size:40px}.twocol{grid-template-columns:1fr}.amount{grid-template-columns:1fr}.modalbox{padding:45px 28px}}
+.curpbox{margin-top:20px}.curpbox .question{font-size:27px;margin:0 0 18px}.curpbox select{width:100%;border:2px solid #d9dde2;border-radius:12px;padding:18px 20px;font-size:25px;background:#fff;margin-bottom:32px}.curp-person{margin:0 0 28px}.curp-person label{display:block;text-align:center;font-size:26px;margin-bottom:12px}.curp-person input{width:100%;border:2px solid #d9dde2;border-radius:12px;padding:18px 20px;font-size:24px;text-transform:uppercase}.curp-person input:focus{outline:4px solid #bcd8ff;border-color:#5c9cff}.curp-actions{border-top:2px solid #bbb;margin-top:45px;padding-top:0}.curp-actions button{display:block;width:92%;margin:0 auto 6px;border:3px solid #9d3454;background:#fff;color:#9d3454;padding:17px;font-size:26px;border-radius:4px}.curp-error{display:none;color:#a32742;text-align:center;font-size:18px;margin:12px 0}.curp-error.show{display:block}
+/* Escudo: limita la imagen para que no se desborde */
+.seal{overflow:hidden;background:transparent}
+.seal img{display:block;width:48px;height:48px;object-fit:contain}
+.watermark{border:0;opacity:1;overflow:hidden;background:transparent}
+.watermark img{display:block;width:100%;height:100%;object-fit:contain}
+@media(max-width:600px){.seal img{width:40px;height:40px}.watermark img{max-width:190px;max-height:190px}}
+
+.spei-logo-wrap{display:flex;justify-content:center;align-items:center;margin-top:22px}
+.spei-logo{display:block;width:min(220px,72%);height:auto;object-fit:contain}
+@media(max-width:480px){.spei-logo{width:min(190px,70%)}}
+
+/* Recuadros informativos sobre el contador */
+.bank-info-24{background:#d8f3fa;border:2px solid #14616f;border-radius:14px;padding:20px 18px;text-align:center;font-size:22px;line-height:1.35;margin:22px 0 18px;color:#202428}
+.bank-payment-time{background:#fff3c9;border:2px solid #98700b;border-radius:14px;padding:24px 20px;text-align:center;color:#74580c;margin:18px 0 20px}
+.bank-payment-time strong{display:block;font-size:26px;line-height:1.15;margin-bottom:16px;letter-spacing:.3px}
+.bank-payment-time span{display:block;font-size:20px;line-height:1.4}
+@media(max-width:480px){.bank-info-24{font-size:18px;padding:17px 14px}.bank-payment-time{padding:20px 14px}.bank-payment-time strong{font-size:22px}.bank-payment-time span{font-size:17px}}
+
+</style>
+<style>
+.flow-card{border:2px solid #d5d5d5;border-radius:12px;overflow:hidden;margin:24px 0;background:#fff}
+.flow-head{background:#0b5792;color:#fff;text-align:center;padding:18px 16px;font-size:27px;font-weight:800}
+.flow-body{padding:32px 28px}
+.flow-label{text-align:center;font-size:27px;margin:4px 0 16px}
+.flow-select,.flow-input{width:100%;border:2px solid #d9dde2;border-radius:12px;padding:18px 20px;font-size:24px;background:#fff;margin-bottom:26px}
+.flow-select:focus,.flow-input:focus{outline:4px solid #bcd8ff;border-color:#5c9cff}
+.flow-disabled{background:#eceff2;color:#333}
+.flow-actions{display:flex;flex-direction:column;align-items:center;gap:10px;margin:48px 0}
+.flow-back{border:2px solid #777;background:#fff;color:#747b82;border-radius:14px;padding:16px 30px;font-size:27px}
+.flow-next{width:100%;border:3px solid #9d3454;background:#fff;color:#9d3454;padding:17px;font-size:25px}
+.flow-error{display:none;background:#ffe5e5;border:1px solid #e3a1a1;color:#8b2222;padding:12px 15px;border-radius:9px;margin:-10px 0 20px}
+.curp-row{margin-bottom:8px}
+@media(max-width:600px){.flow-head{font-size:23px}.flow-label{font-size:23px}.flow-select,.flow-input{font-size:21px}.flow-body{padding:26px 20px}}
+</style>
+
+<style>
+/* Optimización mobile-first: 360–430 px */
+html,body{max-width:100%;overflow-x:hidden}
+img{max-width:100%;height:auto}
+@media (max-width:480px){
+  body{font-size:16px}
+  .gov{height:86px;padding:0 16px}
+  .brand{gap:10px;min-width:0}
+  .gov strong{font-size:19px;line-height:1.02}
+  .seal{width:46px!important;height:46px!important;min-width:46px}
+  .seal img{width:42px!important;height:42px!important;object-fit:contain}
+  .hamb{font-size:34px}
+  .sre-wrap{padding:4px 12px}
+  .sre{min-height:72px;padding:10px 14px;font-size:21px;line-height:1.08;gap:10px}
+  .sre img{width:42px!important;height:42px!important;min-width:42px;object-fit:contain}
+  .sre-title,.sre-text{min-width:0}
+  .sre-subtitle,.sre small{font-size:10px!important;line-height:1.15;letter-spacing:.3px;display:block;margin-top:4px}
+  .page{width:100%;max-width:100%;padding:26px 16px 48px}
+  .hero h1{font-size:30px;line-height:1.12;margin:8px 0 14px}
+  .watermark{width:150px!important;height:150px!important;margin:0 auto 8px;border-width:3px;font-size:20px}
+  .watermark img{width:100%!important;height:100%!important;object-fit:contain}
+  .hero h2{font-size:31px;line-height:1.1}
+  .hero p{font-size:19px;line-height:1.3;margin-bottom:34px}
+  .rule{margin:15px 0 30px}
+  .bigbtn{font-size:19px;line-height:1.25;padding:17px 12px;border-radius:11px;margin-bottom:16px}
+  .info{font-size:17px;line-height:1.45;padding:20px 18px;border-left-width:4px}
+  .terms{font-size:15px;line-height:1.45;margin:30px 4px}
+  .title h1{font-size:30px;line-height:1.15;margin:10px 0 7px}
+  .title p{font-size:20px;line-height:1.25;margin-bottom:16px}
+  .notice{font-size:16px;line-height:1.4;padding:16px 14px;margin:16px 0 24px}
+  .flow-card,.card{margin:16px 0;border-radius:10px}
+  .flow-head,.cardhead{font-size:20px;padding:15px 12px}
+  .flow-body,.cardbody{padding:20px 14px}
+  .flow-label,.label{font-size:18px;line-height:1.3;margin-bottom:10px}
+  .flow-select,.flow-input,.field,.curpbox select,.curp-person input{font-size:16px;padding:14px 12px;margin-bottom:18px;border-radius:9px;min-height:50px}
+  input,select,textarea,button{max-width:100%}
+  .flow-actions,.actions{margin:30px 0;gap:9px}
+  .flow-back,.back{font-size:18px;padding:13px 22px}
+  .flow-next,.continue,.curp-actions button{font-size:18px;padding:14px 10px;width:100%}
+  .curpbox .question{font-size:19px}
+  .curp-person label{font-size:18px}
+  .confirm-title{font-size:30px;line-height:1.08}
+  .greenbox,.paybox,.warning,.longwarn{font-size:16px;line-height:1.45;padding:18px 16px}
+  .paybox{margin:18px 0}
+  .paychoice{font-size:20px;padding:26px 14px;margin:18px 0}
+  .fake-logo{font-size:42px}
+  .timer{font-size:26px;padding:15px;margin:18px 0}
+  .step{font-size:18px;padding:25px 16px}
+  .bankhead,.formhead{font-size:20px;padding:24px 14px}
+  .fakebank{font-size:17px;padding:20px 12px;overflow-wrap:anywhere}
+  .fakebank b{font-size:20px}
+  .amount{grid-template-columns:1fr}
+  .amount>div{font-size:17px;padding:18px 12px}
+  .form{padding:20px 14px}
+  .twocol{grid-template-columns:1fr;gap:0}
+  .form label{font-size:16px}
+  .form input{font-size:16px;padding:13px 12px;margin-bottom:18px}
+  .disabled{font-size:18px;padding:15px 18px;width:100%}
+  .accordion{font-size:18px;padding:17px 16px}
+  .modal{padding:14px}
+  .modalbox{width:100%;max-width:390px;padding:36px 20px;border-radius:18px}
+  .modalbox h2{font-size:25px}
+  .modalbox p{font-size:17px}
+  .modalbox button{font-size:18px;padding:15px}
+  #applicantSummary,#applicantTableBox,#demoPaymentSummary{margin:18px 0!important}
+  #applicantSummaryBody,#demoPaymentSummaryBody{font-size:16px!important;padding:16px!important}
+  #applicantTableBox>div:nth-child(2){padding:10px!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+  #applicantTableBox table{min-width:620px!important;font-size:13px!important}
+  #applicantTableBox th,#applicantTableBox td{padding:7px!important}
+  .mapsBtn{font-size:15px!important;padding:10px 12px!important}
+}
+@media (max-width:360px){
+  .gov strong{font-size:17px}
+  .sre{font-size:18px}
+  .page{padding-left:12px;padding-right:12px}
+  .hero h1{font-size:27px}
+  .watermark{width:135px!important;height:135px!important}
+  .hero h2{font-size:28px}
+  .title h1,.confirm-title{font-size:27px}
+}
+.btn-white-icon{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;margin-right:12px;vertical-align:middle}.btn-white-icon svg{width:26px;height:26px;fill:#fff;display:block}@media(max-width:480px){.btn-white-icon{width:24px;height:24px;margin-right:9px}.btn-white-icon svg{width:23px;height:23px}}
+</style>
+
+<style>
+.card-brand-logo{display:flex;justify-content:center;align-items:center;margin-top:24px}
+.card-brand-logo img{display:block;width:min(330px,85%);height:auto;object-fit:contain}
+@media(max-width:480px){.card-brand-logo{margin-top:18px}.card-brand-logo img{width:min(280px,88%)}}
+</style>
+
+<style>
+/* Calendario personalizado, optimizado para móvil */
+.pretty-date-wrap{position:relative;margin-bottom:30px;font-family:Arial,Helvetica,sans-serif}.native-date-hidden{position:absolute!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}.pretty-date-button{width:100%;min-height:62px;border:2px solid #d9dde2;border-radius:14px;background:#fff;padding:0 16px;display:flex;align-items:center;gap:12px;font-size:20px;color:#25282d;text-align:left;cursor:pointer;box-shadow:0 2px 8px rgba(20,42,70,.04);transition:.2s}.pretty-date-button:hover,.pretty-date-button:focus{border-color:#5c9cff;box-shadow:0 0 0 4px #dceaff;outline:none}.pretty-date-icon{font-size:22px}.pretty-date-arrow{margin-left:auto;font-size:24px;color:#6d7480}.pretty-calendar{display:none;position:absolute;z-index:50;top:calc(100% + 9px);left:0;width:100%;background:#fff;border:1px solid #dce2e8;border-radius:18px;box-shadow:0 18px 45px rgba(25,40,60,.18);padding:16px;overflow:hidden}.pretty-calendar.open{display:block;animation:calIn .16s ease-out}@keyframes calIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}.pretty-cal-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;background:#23558f;color:#fff;border-radius:13px;padding:10px}.pretty-cal-head>div{text-align:center;display:flex;flex-direction:column;line-height:1.15}.pretty-cal-head strong{font-size:20px;text-transform:capitalize}.pretty-cal-head span{font-size:13px;opacity:.88;margin-top:3px}.pretty-cal-head button{width:40px;height:40px;border:0;border-radius:10px;background:rgba(255,255,255,.14);color:#fff;font-size:30px;line-height:1;cursor:pointer}.pretty-cal-head button:hover{background:rgba(255,255,255,.24)}.pretty-week,.pretty-days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.pretty-week{margin:16px 0 8px}.pretty-week span{text-align:center;font-size:11px;font-weight:800;color:#7b8490}.pretty-days button,.pretty-days .blank{aspect-ratio:1;min-width:0}.pretty-days button{border:0;border-radius:11px;background:transparent;font-size:15px;color:#25282d;cursor:pointer;font-weight:600}.pretty-days button:hover:not(:disabled){background:#eaf2ff;color:#23558f}.pretty-days button.selected{background:#23558f!important;color:#fff!important;box-shadow:0 4px 12px rgba(35,85,143,.28)}.pretty-days button.today{box-shadow:inset 0 0 0 2px #b18b31}.pretty-days button:disabled{color:#c2c7cd;cursor:not-allowed;text-decoration:line-through}.pretty-cal-foot{display:flex;justify-content:space-between;gap:10px;border-top:1px solid #edf0f3;margin-top:14px;padding-top:12px}.pretty-cal-foot button{border:0;background:#eef3f8;color:#23558f;border-radius:9px;padding:10px 12px;font-size:13px;font-weight:700;cursor:pointer}.pretty-cal-foot button:last-child{background:#23558f;color:#fff}@media(max-width:480px){.pretty-date-wrap{margin-bottom:18px}.pretty-date-button{min-height:54px;border-radius:10px;font-size:16px;padding:0 13px}.pretty-calendar{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:calc(100% - 28px);max-width:390px;padding:14px;border-radius:18px}.pretty-calendar.open{animation:none}.pretty-cal-head strong{font-size:18px}.pretty-days button{font-size:14px}.pretty-week,.pretty-days{gap:4px}}
+
+/* Ajustes visuales de fecha: CURP dinámico e icono de calendario a la derecha */
+.pretty-date-button{justify-content:flex-start}
+.pretty-date-button #prettyDateText{flex:1}
+.pretty-date-icon{margin-left:auto;width:34px;height:34px;border-radius:8px;background:#2f7df6;color:#fff;display:flex;align-items:center;justify-content:center;font-size:0;position:relative;flex:0 0 34px}
+.pretty-date-icon::before{content:"";width:18px;height:16px;border:3px solid #fff;border-radius:3px;box-sizing:border-box}
+.pretty-date-icon::after{content:"";position:absolute;top:9px;left:8px;width:18px;border-top:3px solid #fff;box-shadow:4px 5px 0 -1px #fff,10px 5px 0 -1px #fff,4px 10px 0 -1px #fff,10px 10px 0 -1px #fff}
+@media(max-width:480px){.pretty-date-icon{width:32px;height:32px;flex-basis:32px}.pretty-date-button #prettyDateText{font-size:18px}}
+</style>
+
+<style>
+/* Menú móvil desplegable */
+.hamb{
+  cursor:pointer;
+  user-select:none;
+  border:0;
+  background:transparent;
+  color:#fff;
+  line-height:1;
+}
+.mobile-menu{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  background:#6f102f;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .22s ease, visibility .22s ease;
+}
+.mobile-menu.open{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+.mobile-menu-close{
+  position:absolute;
+  top:24px;
+  right:25px;
+  width:48px;
+  height:48px;
+  border:0;
+  background:transparent;
+  color:#fff;
+  font-size:42px;
+  font-weight:300;
+  line-height:1;
+  cursor:pointer;
+}
+.mobile-menu-links{
+  margin:auto;
+  width:min(78%,330px);
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:9px;
+  text-align:center;
+}
+.mobile-menu-links button{
+  border:0;
+  background:transparent;
+  color:#fff;
+  font:inherit;
+  font-size:25px;
+  font-weight:800;
+  padding:11px 14px;
+  border-radius:9px;
+  cursor:pointer;
+}
+.mobile-menu-links button:hover,
+.mobile-menu-links button:focus{
+  background:rgba(255,255,255,.10);
+  outline:none;
+}
+.mobile-menu-links .active-link{
+  background:rgba(255,255,255,.10);
+}
+.menu-demo-note{
+  margin:0 auto 24px;
+  width:min(88%,390px);
+  text-align:center;
+  font-size:12px;
+  line-height:1.35;
+  color:rgba(255,255,255,.78);
+}
+body.menu-open{overflow:hidden}
+@media(min-width:700px){
+  .mobile-menu-links{width:360px}
+}
+</style>
+
+
+<style>
+.info-screen-title{font-size:34px;line-height:1.05;margin:5px 0 12px;font-weight:800}
+.info-passport{text-align:center;margin:10px 0 30px}
+.info-passport img{width:150px;height:150px;object-fit:contain}
+.info-passport h2{color:#7b1438;font-size:28px;margin:8px 0 3px}
+.info-passport p{font-size:17px;margin:0}
+.info-summary{background:#f6f7fa;border-left:4px solid #0b5792;border-radius:0 9px 9px 0;padding:16px 15px;margin:22px 0;font-size:16px;line-height:1.45}
+.info-detail-card{border:1px solid #d9dde2;border-radius:12px;padding:22px;margin:22px 0;background:#fff;box-shadow:0 7px 18px rgba(0,0,0,.08)}
+.info-detail-card h2{color:#7b1438;font-size:25px;line-height:1.25;margin:0 0 16px}
+.info-detail-card h3{font-size:18px;margin:15px 0 8px}
+.info-detail-card ul{padding-left:20px;margin:8px 0;line-height:1.55}
+.info-important{background:#fff9df;border-left:4px solid #e1b600;padding:15px;margin-top:16px;line-height:1.4}
+.price-demo{background:#f7f8fb;border-radius:9px;padding:15px;margin:10px 0}
+.price-demo b{display:block;color:#7b1438;font-size:24px;margin-top:5px}
+@media(max-width:480px){
+ .info-screen-title{font-size:27px}
+ .info-passport img{width:135px;height:135px}
+ .info-passport h2{font-size:25px}
+ .info-detail-card{padding:20px}
+}
+</style>
+
+
+<style>
+.price-demo span{display:block;margin-top:7px;color:#56606d;font-size:16px}
+</style>
+
+
+<style>
+.office-card{
+  background:#f7f8fa;
+  border-radius:12px;
+  padding:20px 18px;
+  margin:18px 0;
+}
+.office-card strong{
+  display:block;
+  color:#202936;
+  font-size:21px;
+  line-height:1.25;
+  margin-bottom:8px;
+}
+.office-card p{
+  margin:0;
+  color:#596270;
+  font-size:17px;
+  line-height:1.5;
+}
+@media(max-width:480px){
+  .office-card{padding:18px 16px}
+  .office-card strong{font-size:20px}
+  .office-card p{font-size:16px}
+}
+</style>
+
+
+<style>
+.contact-wrap{text-align:center;margin:6px 0 28px}
+.contact-wrap img{width:155px;height:155px;object-fit:contain;opacity:.72}
+.contact-wrap h1{color:#7b1438;font-size:34px;margin:10px 0 5px}
+.contact-wrap p{font-size:20px;color:#666;margin:0}
+.contact-sep{border:0;border-top:1px solid #ececec;margin:28px 0}
+.contact-info-box{
+  background:#f6f7fa;border-left:5px solid #0b5792;border-radius:0 12px 12px 0;
+  padding:18px 17px;text-align:left;line-height:1.5;margin-bottom:28px
+}
+.contact-info-box p{margin:9px 0;font-size:17px}
+.contact-demo-badge{
+  background:#fff7d9;border:1px solid #e4c65a;border-radius:10px;padding:12px 14px;
+  font-size:14px;line-height:1.4;margin:0 0 24px;color:#6e5717;text-align:left
+}
+.contact-form{text-align:left}
+.contact-form h2{font-size:25px;margin:0 0 22px}
+.contact-form label{display:block;font-size:18px;margin:18px 0 8px}
+.contact-form input,.contact-form textarea{
+  width:100%;box-sizing:border-box;border:1px solid #d7dce2;border-radius:9px;
+  padding:14px 15px;font:inherit;font-size:17px;background:#fff;box-shadow:0 3px 9px rgba(0,0,0,.06)
+}
+.contact-form textarea{min-height:150px;resize:vertical}
+.contact-send{
+  width:100%;margin-top:22px;border:0;border-radius:9px;background:#7b1438;color:#fff;
+  padding:15px;font:inherit;font-size:19px;cursor:pointer
+}
+.contact-form-note{font-size:13px;color:#666;line-height:1.4;margin-top:12px}
+@media(max-width:480px){
+ .contact-wrap h1{font-size:30px}
+ .contact-wrap p{font-size:18px}
+ .contact-info-box p{font-size:16px}
+}
+</style>
+
+
+<style>
+/* Tiempos de entrega */
+.delivery-row{display:grid;grid-template-columns:1fr 1.45fr;gap:24px;align-items:center;padding:28px 0;border-bottom:1px solid #e2e2e2;font-size:22px;line-height:1.35}.delivery-row:last-child{border-bottom:0}.delivery-row span{color:#3f4856}.delivery-row b{color:#7b1438;font-size:23px}.info-detail-card h2{display:flex;align-items:center;gap:10px}@media(max-width:480px){.delivery-row{grid-template-columns:1fr 1.35fr;gap:14px;padding:22px 0;font-size:18px}.delivery-row b{font-size:19px}.info-detail-card h2{font-size:24px}}
+</style>
+</head><body>
+
+<div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+  <button type="button" class="mobile-menu-close" aria-label="Cerrar menú" onclick="closeMobileMenu()">×</button>
+  <nav class="mobile-menu-links" aria-label="Menú de demostración">
+    <button type="button" class="active-link" onclick="menuGo('home')">Cita express</button>
+    <button type="button" onclick="menuGo('information')">Información</button>
+    <button type="button" onclick="menuGo('contact')">Contacto</button>
+  </nav>
+  <div class="menu-demo-note">Maqueta educativa de demostración. No es un sitio oficial ni procesa trámites o pagos reales.</div>
+</div>
+<header class="gov"><div class="brand"><div class="seal">
+    <img src="aguila.png" alt="Escudo de México">
+</div><strong>GOBIERNO DE<br>MÉXICO</strong></div><button type="button" class="hamb" aria-label="Abrir menú" aria-controls="mobileMenu" aria-expanded="false" onclick="openMobileMenu()">☰</button></header><div class="sre-wrap"><div class="sre"><img src="aguila.png" alt="Escudo de México" class="sre-logo"><div class="sre-text"><div class="sre-title">RELACIONES EXTERIORES</div><div class="sre-subtitle">SECRETARÍA DE RELACIONES EXTERIORES</div></div></div></div>
+<main class="page"><section id="home" class="screen active"><div class="hero"><h1>Pasaporte Mexicano</h1><div class="watermark"><img src="aguila.png" alt="Escudo Nacional"></div><h2>Cita Express</h2><p>Sistema de cita express por internet</p></div><div class="rule"></div><button class="bigbtn" onclick="openCurp()"><span class="btn-white-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-4.42 0-8 2.24-8 5v3h16v-3c0-2.76-3.58-5-8-5z"/></svg></span>Cita Personal / Gestores</button><button class="bigbtn" onclick="go('curp')"><span class="btn-white-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 11c2.21 0 4-1.79 4-4S11.21 3 9 3 5 4.79 5 7s1.79 4 4 4zm6 1c1.66 0 3-1.34 3-3s-1.34-3-3-3c-.32 0-.62.05-.91.14.57 1.51.42 3.22-.41 4.61.4.16.84.25 1.32.25zM9 13c-3.87 0-7 1.79-7 4v3h14v-3c0-2.21-3.13-4-7-4zm6.5.25c1.5.87 2.5 2.08 2.5 3.75v3h4v-2.5c0-1.94-2.84-3.55-6.5-4.25z"/></svg></span>Cita Familiar</button><div class="info"><b>👤 Cita Personal / Gestores:</b><br>Seleccione esta opción si necesita tramitar pasaportes para una o varias personas con diferentes fechas, horarios u oficinas.<br><br><b>👥 Cita Familiar:</b> Seleccione esta opción si todos los solicitantes acudirán a la misma oficina, en la misma fecha y horario.</div><div class="terms">Al continuar con el proceso, usted acepta haber leído los <a href="#">términos y condiciones de uso</a>. uso del servicio de citas express para pasaporte mexicano de la Secretaría de Relaciones Exteriores.</div></section>
+
+<section id="information" class="screen">
+  <h1 class="info-screen-title">Información del<br>Trámite</h1>
+  <div class="info-passport">
+    <img src="aguila.png" alt="Escudo ilustrativo">
+    <h2>Pasaporte Mexicano</h2>
+    <p>Requisitos, costos, tiempos y oficinas de atención</p>
+  </div>
+
+  <div class="info-summary">
+    <b>📄 Requisitos:</b> Consulte los documentos necesarios para tramitar su pasaporte según su caso.<br><br>
+    <b>💳 Costos:</b> Pasaportes de 3, 6 y 10 años con diferentes tarifas.<br><br>
+    <b>🕒 Tiempos:</b> Servicio regular, express e inmediato según su necesidad.
+  </div>
+
+  <div class="info-detail-card">
+    <h2>📄 Requisitos para<br>Tramitar Pasaporte</h2>
+    <h3>Documentos necesarios:</h3>
+    <ul>
+      <li>Acta de nacimiento original y copia.</li>
+      <li>Identificación oficial vigente con fotografía (INE, cartilla militar, cédula profesional)</li>
+      <li>CURP impreso.</li>
+      <li>Comprobante de domicilio reciente (no mayor a 3 meses)</li>
+      <li>Comprobante de pago de derechos.</li>
+      <li>Para menores de edad: documentación y acompañamiento correspondiente.</li>
+    </ul>
+    <div class="info-important"><b>ⓘ Importante:</b> Todos los documentos deben estar en buen estado y ser legibles. No se aceptarán documentos con tachaduras, enmendaduras o alteraciones.</div>
+  </div>
+
+  <div class="info-detail-card">
+    <h2>💳 Costos del Trámite</h2>
+    <div class="price-demo">Pasaporte ordinario (3 años)<b>$1,730 MXN</b><span>Vigencia: 3 años</span></div>
+    <div class="price-demo">Pasaporte ordinario (6 años)<b>$2,350 MXN</b><span>Vigencia: 6 años</span></div>
+    <div class="price-demo">Pasaporte ordinario (10 años)<b>$4,120 MXN</b><span>Vigencia: 10 años</span></div>
+    <div class="price-demo">Menores de edad<b>$945 MXN</b><span>Vigencia: 3 años</span></div>
+    
+  </div>
+
+  <div class="info-detail-card delivery-demo">
+    <h2>🕒 Tiempos de Entrega</h2>
+    <div class="delivery-row"><span>Servicio<br>Regular</span><b>8 a 10 días<br>hábiles</b></div>
+    <div class="delivery-row"><span>Servicio<br>Express</span><b>2 a 4 días<br>hábiles</b></div>
+    <div class="delivery-row"><span>Servicio<br>Inmediato</span><b>Mismo día (sujeto a disponibilidad)</b></div>
+  </div>
+
+  <div class="info-detail-card offices-demo">
+    <h2>📍 Oficinas de Atención</h2>
+
+    <div class="office-card">
+      <strong>Ciudad de México - Centro</strong>
+      <p>Av. Juárez 92, Col. Centro, C.P. 06010<br>Horario: Lunes a Viernes, 8:00 AM - 4:00 PM</p>
+    </div>
+
+    <div class="office-card">
+      <strong>Ciudad de México - Sur</strong>
+      <p>Av. Universidad 1000, Col. Xoco, C.P. 03330<br>Horario: Lunes a Viernes, 8:00 AM - 4:00 PM</p>
+    </div>
+
+    <div class="office-card">
+      <strong>Guadalajara</strong>
+      <p>Av. Chapultepec 123, Col. Americana, C.P. 44160<br>Horario: Lunes a Viernes, 8:00 AM - 4:00 PM</p>
+    </div>
+
+    <div class="office-card">
+      <strong>Monterrey</strong>
+      <p>Av. Constitución 2000, Col. Obispado, C.P. 64060<br>Horario: Lunes a Viernes, 8:00 AM - 4:00 PM</p>
+    </div>
+
+    
+  </div>
+
+  <div class="flow-actions">
+    <button class="flow-back" type="button" onclick="go('home')">← Regresar</button>
+  </div>
+</section>
+
+
+<section id="contact" class="screen">
+  <div class="contact-wrap">
+    <img src="aguila.png" alt="Escudo ilustrativo">
+    <h1>Contacto</h1>
+    <p>Secretaría de Relaciones Exteriores</p>
+  </div>
+
+  <hr class="contact-sep">
+
+  
+    
+
+  <div class="contact-info-box">
+    <p>✉️ <b>Correo:</b> citas@sre.gob.mx</p>
+    <p>📞 <b>Teléfono:</b>  01 450 8110 779 · Lunes a Viernes, 8:00 AM - 8:00 PM</p>
+    <p>📍 <b>Dirección:</b>  Plaza Juárez 20, Col. Centro, C.P. 06010, CDMX</p>
+  </div>
+
+  <hr class="contact-sep">
+
+  <form class="contact-form" onsubmit="demoContactSubmit(event)">
+    <h2>Envíanos un mensaje</h2>
+
+    <label for="contactName">Nombre *</label>
+    <input id="contactName" type="text" placeholder="Ingrese su nombre" required>
+
+    <label for="contactLast">Apellido *</label>
+    <input id="contactLast" type="text" placeholder="Ingrese su apellido" required>
+
+    <label for="contactEmail">Correo Electrónico *</label>
+    <input id="contactEmail" type="email" placeholder="tu@email.com" required>
+
+    <label for="contactPhone">Teléfono</label>
+    <input id="contactPhone" type="tel" inputmode="numeric" placeholder="10 dígitos" maxlength="10">
+
+    <label for="contactSubject">Asunto</label>
+    <input id="contactSubject" type="text" placeholder="Asunto de tu consulta">
+
+    <label for="contactMessage">Mensaje *</label>
+    <textarea id="contactMessage" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+    <button class="contact-send" type="submit">📨 &nbsp; Enviar Mensaje</button>
+    
+  </form>
+
+  <div class="flow-actions">
+    <button class="flow-back" type="button" onclick="go('home')">← Regresar</button>
+  </div>
+</section>
+
+<section id="curp" class="screen">
+  <div class="hero">
+    <h1>Pasaporte Mexicano</h1>
+    <div class="watermark">
+        <img src="aguila.png" alt="Águila del Escudo Nacional">
+    </div>
+</div>
+  <div class="title"><h1>Cita Personal / Gestores</h1><p>Datos de solicitantes</p></div>
+  <div class="notice">ⓘ Por favor, ingrese correctamente su CURP para continuar con el proceso de solicitud.</div>
+  <div class="flow-card"><div class="flow-head">Solicitantes</div><div class="flow-body">
+    <div class="flow-label">¿Cuántas personas realizarán el trámite?</div>
+    <select id="personCount" class="flow-select" onchange="renderCurps()">
+      <option value="1">1 persona</option><option value="2">2 personas</option>
+      <option value="3">3 personas</option><option value="4">4 personas</option>
+      <option value="5">5 personas</option><option value="6">6 personas</option>
+      <option value="7">7 personas</option><option value="8">8 personas</option>
+      <option value="9">9 personas</option><option value="10">10 personas</option>
+    </select>
+    <div id="curpFields"></div>
+    <div id="curpError" class="flow-error">Escriba una CURP ficticia de 18 caracteres para cada persona.</div>
+  </div></div>
+  <div class="flow-actions"><button class="flow-back" onclick="go('home')">← Cancelar</button><button class="flow-next" onclick="continueCurp()">Continuar →</button></div>
+</section>
+
+<section id="tramite" class="screen">
+  <div class="hero"><h1>Pasaporte Mexicano</h1><div class="watermark"><img src="aguila.png" alt="Escudo Nacional"></div></div>
+  <div class="title"><h1>Cita Personal / Gestores</h1><p>Datos de trámite</p></div>
+  <div class="notice">ⓘ Seleccione el tipo de trámite y vigencia deseada para cada persona.</div>
+  <div id="tramiteCards"></div>
+  <div class="flow-actions"><button class="flow-back" onclick="go('curp')">← Regresar</button><button class="flow-next" onclick="continueTramite()">Continuar →</button></div>
+</section>
+
+<section id="nationality" class="screen">
+  <div class="hero"><h1>Pasaporte Mexicano</h1><div class="watermark"><img src="aguila.png" alt="Escudo Nacional"></div></div>
+  <div class="title"><h1>Cita Personal / Gestores</h1><p>Nacionalidad</p></div>
+  <div class="notice">ⓘ Seleccione la nacionalidad de cada persona.</div>
+  <div id="nationalityCards"></div>
+  <div class="flow-actions"><button class="flow-back" onclick="go('tramite')">← Regresar</button><button class="flow-next" onclick="continueNationality()">Continuar →</button></div>
+</section>
+
+<section id="office" class="screen">
+  <div class="hero"><div class="watermark"><img src="aguila.png" alt="Escudo Nacional"></div></div>
+  <div class="title"><h1>Cita Personal / Gestores</h1><p>Selección de oficina</p></div>
+  <div class="notice">ⓘ Seleccione el estado y posteriormente la oficina donde realizará su trámite.</div>
+  <div id="officeCards"></div>
+  <div class="flow-actions"><button class="flow-back" onclick="go('nationality')">← Regresar</button><button class="flow-next" onclick="continueOffice()">Continuar →</button></div>
+</section>
+
+<section id="date" class="screen"><div class="hero">
+  <div class="watermark"><img src="aguila.png" alt="Escudo Nacional"></div>
+</div><div class="title"><h1>Cita Personal / Gestores</h1><p>Selección de fecha y horario</p></div>
+<div class="notice">ⓘ Fechas disponibles a partir de una semana. Domingos no disponibles.</div>
+<div class="card"><div class="cardhead" id="dateCurp">CURP</div>
+<div class="cardbody"><div class="label">FECHA</div>
+<div class="pretty-date-wrap">
+  <button type="button" id="prettyDateButton" class="pretty-date-button" aria-haspopup="dialog" aria-expanded="false">
+    <span id="prettyDateText">Selecciona una fecha</span><span class="pretty-date-icon" aria-hidden="true">▣</span>
+  </button>
+  <input id="fecha" type="date" class="native-date-hidden" tabindex="-1" aria-hidden="true">
+  <div id="prettyCalendar" class="pretty-calendar" role="dialog" aria-label="Seleccionar fecha">
+    <div class="pretty-cal-head"><button type="button" id="calPrev" aria-label="Mes anterior">‹</button><div><strong id="calMonth"></strong><span id="calYear"></span></div><button type="button" id="calNext" aria-label="Mes siguiente">›</button></div>
+    <div class="pretty-week"><span>LU</span><span>MA</span><span>MI</span><span>JU</span><span>VI</span><span>SÁ</span><span>DO</span></div>
+    <div id="calDays" class="pretty-days"></div>
+    <div class="pretty-cal-foot"><button type="button" id="calClear">Limpiar</button><button type="button" id="calToday">Ir a disponible</button></div>
+  </div>
+</div><div class="label">HORA</div>
+<select id="hora" class="field"><option value="">Primero seleccione una fecha</option><option value="08:00">8:00 AM</option><option value="08:30">8:30 AM</option><option value="09:00">9:00 AM</option><option value="09:30">9:30 AM</option><option value="10:00">10:00 AM</option><option value="10:30">10:30 AM</option><option value="11:00">11:00 AM</option><option value="11:30">11:30 AM</option><option value="12:00">12:00 PM</option><option value="12:30">12:30 PM</option><option value="13:00">1:00 PM</option><option value="13:30">1:30 PM</option><option value="14:00">2:00 PM</option><option value="14:30">2:30 PM</option><option value="15:00">3:00 PM</option><option value="15:30">3:30 PM</option><option value="16:00">4:00 PM</option></select></div></div><div class="actions"><button class="back" onclick="go('home')">← Regresar</button><button class="continue" onclick="go('confirm')">Continuar →</button></div></section>
+<section id="confirm" class="screen"><div class="confirm-title">Confirmación de<br>Datos de Cita<br>Express</div><div class="hero"><div class="watermark"><img src="aguila.png" alt="Escudo Nacional"></div></div><div class="notice"><b>ⓘ Información importante:</b> Verifique que la ubicación y los datos ingresados sean correctos.</div><div class="greenbox"><b>Fecha de trámite:</b> <span id="confirmTramiteFecha">—</span><br><b>Folio:</b> <span id="confirmFolio">—</span><br><br><div id="confirmCitas"></div></div>
+<div id="applicantSummary" style="border:1px solid #ccc;border-radius:8px;margin:24px 0;background:#fff;overflow:hidden">
+  <div style="padding:15px 20px;font-size:22px;font-weight:700;background:#fafafa;border-bottom:1px solid #ccc">
+    Datos del solicitante
+  </div>
+  <div id="applicantSummaryBody" style="padding:22px 20px;font-size:18px;line-height:1.7"></div>
+</div>
+
+
+<div id="applicantTableBox" style="border:1px solid #ccc;border-radius:8px;margin:24px 0;background:#fff;overflow:hidden">
+  <div style="padding:15px 20px;font-size:22px;font-weight:700;background:#fafafa;border-bottom:1px solid #ccc">
+    Datos del solicitante
+  </div>
+  <div style="padding:20px;overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;min-width:700px;font-size:16px">
+      <thead>
+        <tr>
+          <th style="border:1px solid #ddd;padding:10px;text-align:left">#</th>
+          <th style="border:1px solid #ddd;padding:10px;text-align:left">CURP</th>
+          <th style="border:1px solid #ddd;padding:10px;text-align:left">Vigencia</th>
+          <th style="border:1px solid #ddd;padding:10px;text-align:left">Precio</th>
+          <th style="border:1px solid #ddd;padding:10px;text-align:left">Fecha Cita</th>
+          <th style="border:1px solid #ddd;padding:10px;text-align:left">Hora</th>
+        </tr>
+      </thead>
+      <tbody id="applicantTableBody"></tbody>
+      <tfoot id="applicantTableFoot"></tfoot>
+    </table>
+  </div>
+</div>
+
+<div id="demoPaymentSummary" style="margin:24px 0;padding:25px 20px;border-radius:8px;background:#fafafa;font-size:18px;line-height:1.7">
+  <div id="demoPaymentSummaryBody"></div>
+</div>
+
+<div class="paybox"><b>Pago por 1 pasaporte:</b><br><span id="bankDemoVigencia">Vigencia seleccionada: —</span><br><b>Importe a pagar: <span id="bankDemoAmount">$0.00 MXN</span></b></div><h1>Método de pago</h1><div class="warning">ES OBLIGATORIO REALICE SU PAGO EN UN PERIODO MÁXIMO DE 30 MINUTOS PARA CONSERVAR SU CITA EXPRESS, DE LO CONTRARIO, SU CITA SERÁ CANCELADA Y ENTRARÁ EN UNA LISTA DE ESPERA CON UN TIEMPO DE ATENCIÓN DE AL MENOS 2 MESES</div><div class="paychoice" onclick="showModal()">Transferencia electrónica<div class="spei-logo-wrap"><img src="spei.png" alt="SPEI" class="spei-logo"></div></div><div class="paychoice">Tarjeta de crédito o débito<div class="card-brand-logo"><img src="visa.png" alt="Visa y Mastercard"></div></div></section>
+<section id="bank" class="screen"><div class="confirm-title">Confirmación de<br>Cita Express</div>
+<div class="bank-info-24">Sistema de citas express disponible las 24 horas del día</div>
+<div class="bank-payment-time"><strong>TIEMPO PARA COMPLETAR SU PAGO</strong><span>Por favor, complete su pago dentro de los próximos 30 minutos para mantener su reservación activa</span></div>
+<div class="timer" id="timer">30 m y 00 s</div><div class="greenbox"><b>Fecha de trámite:</b> <span id="transferFechaTramite">—</span><br><b>Folio:</b> <span id="transferFolio">—</span><br><div id="transferCitas"></div></div><div class="step"><b>PASO 1: REALICE SU TRANSFERENCIA</b><br><br>Use los datos de abajo desde su aplicación bancaria</div><div class="bankhead">DATOS OFICIALES PARA TRANSFERENCIA SPEI<br><br>Secretaría de Relaciones Exteriores</div><div class="fakebank">BENEFICIARIO<br><b>Pago</b></div><div class="fakebank">INSTITUCIÓN BANCARIA<br><b>Inbursa</b></div><div class="fakebank">CLABE INTERBANCARIA<br><b><span id="demoClabe">036260711250192447</span><br><button type="button" onclick="copyDemoText(\'demoClabe\')" style="margin-top:10px;padding:7px 14px;cursor:pointer">Copiar</button></b></div><div class="amount"><div>CONCEPTO<br><b>PAGO</b></div><div>IMPORTE<br><b><span id="bankCardAmount">$0.00 MXN</span></b></div></div><div class="formhead">CONFIRMACIÓN DE PAGO<br>Complete los siguientes datos para verificar su transferencia</div><div class="form"><div class="twocol"><div><label>Nombre *</label><input placeholder="Ingrese su nombre"></div><div><label>Apellido *</label><input placeholder="Ingrese su apellido"></div></div><label>Correo electrónico *</label><input placeholder="Ingrese su correo electrónico"><label>Teléfono / WhatsApp *</label><input placeholder="000 000 0000"><button class="disabled" type="button">CONFIRMAR PAGO</button><div class="notice"><b>Nota:</b> Para asegurar que su cita permanezca activa, complete su pago dentro de los próximos 30 minutos. Este paso es completamente seguro y necesario para completar su proceso correctamente.</div><div class="longwarn">
+  <b>Aviso oficial sobre la verificación del pago y el registro de su solicitud de cita</b> Para garantizar la correcta identificación de su pago y la adecuada integración de su solicitud en el sistema de citas, se aplican los siguientes pasos obligatorios: Una vez realizada la transferencia bancaria, el solicitante deberá ingresar su nombre completo, correo electrónico y número de teléfono en los campos correspondientes. La verificación del pago no se iniciará hasta que el solicitante presione el botón "Confirmar Pago". La omisión de este paso impedirá la validación de la operación y bloqueará el registro de la solicitud. Los datos bancarios mostrados en el panel izquierdo han sido verificados y se encuentran destinados exclusivamente al procesamiento de pagos asociados a solicitudes de cita. Su utilización garantiza que la operación se registre y asigne correctamente. Tras ingresar la información requerida y presionar "Confirmar Pago", el sistema realizará la verificación automática del pago. En caso de que esta validación no pueda completarse, se solicitará al usuario cargar el comprobante de pago para realizar la verificación manual y asegurar que la solicitud quede correctamente registrada. El suministro de los datos requeridos y, cuando sea necesario, la presentación del comprobante de pago constituyen requisitos indispensables para completar el proceso de asignación de cita.</div></div>
+<div class="accordion" style="background:#0b5794;color:white;font-weight:700">
+  Opiniones de usuarios
+</div>
+<div id="demoTestimonials" style="border:1px solid #ccc;padding:18px;background:white">
+  <div id="demoTestimonialCards"></div>
+  
+</div></section></main>
+<div id="modal" class="modal"><div class="modalbox"><span class="close" onclick="hideModal()">×</span><div style="font-size:55px">⚠️</div><h2>Aviso Importante</h2>
+<p>Actualmente estamos experimentando algunos inconvenientes técnicos con el sistema de pagos. Sin embargo, no te preocupes, puedes realizar tu pago mediante via SPEI. Si prefieres este método, por favor, haz clic en el botón para ser redirigido a la página correspondiente. Gracias por tu comprensión.</p><button onclick="hideModal();go('bank');startTimer()">Continuar con el pago</button></div></div><script>
+let currentMode='personal';
+let demoCurps=[];
+let t=1800,iv;
+
+function go(id){
+  document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));
+  const s=document.getElementById(id);
+  if(s)s.classList.add('active');
+  window.scrollTo(0,0);
+  if(id==='confirm') setTimeout(()=>{ buildConfirmationSummary(); buildApplicantAndPaymentSummary(); buildApplicantTable(); },0);
+  if(id==='bank') setTimeout(()=>{ buildTransferSummary(); updateBankDemoAmount(); buildApplicantTable(); },0);
+}
+function beginFlow(mode){
+  currentMode=mode;
+  const title=document.querySelector('#curp .title h1');
+  if(title) title.textContent=mode==='family'?'Cita Familiar':'Cita Personal / Gestores';
+  go('curp');
+  renderCurps();
+}
+function showModal(){document.getElementById('modal').classList.add('show')}
+function hideModal(){document.getElementById('modal').classList.remove('show')}
+function startTimer(){
+  clearInterval(iv); t=1800;
+  iv=setInterval(()=>{
+    if(t<=0)return clearInterval(iv);
+    t--;
+    const el=document.getElementById('timer');
+    if(el)el.textContent=`${Math.floor(t/60)} m y ${String(t%60).padStart(2,'0')} s`;
+  },1000);
+}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));}
+
+function renderCurps(){
+  const count=document.getElementById('personCount');
+  if(!count)return;
+  const n=Number(count.value||1);
+  const box=document.getElementById('curpFields');
+  let out='';
+  for(let i=0;i<n;i++){
+    out+=`<div class="curp-row"><div class="flow-label">Ingresa el CURP de la Persona ${i+1}</div>
+    <input class="flow-input curpInput" maxlength="18" autocomplete="off" placeholder="CURP Persona ${i+1}" value="${esc(demoCurps[i]||'')}"></div>`;
+  }
+  box.innerHTML=out;
+}
+function continueFromCurp(){
+  continueCurp();
+}
+function continueCurp(){
+  const vals=[...document.querySelectorAll('.curpInput')].map(x=>x.value.replace(/\s+/g,'').toUpperCase());
+  const ok=vals.length && vals.every(v=>/^[A-Z0-9]{18}$/.test(v));
+  const err=document.getElementById('curpError');
+  if(err)err.style.display=ok?'none':'block';
+  if(!ok)return;
+  demoCurps=vals; buildTramite(); go('tramite');
+}
+function buildTramite(){
+  document.getElementById('tramiteCards').innerHTML=demoCurps.map(c=>`
+  <div class="flow-card"><div class="flow-head">Trámite - ${esc(c)}</div><div class="flow-body">
+  <div class="flow-label">TIPO DE TRÁMITE</div>
+  <select class="flow-select tramiteTipo"><option value="">--Seleccionar--</option><option>Primera vez</option><option>Extravío</option><option>Renovación</option></select>
+  <div class="flow-label">VIGENCIA Y PRECIO</div>
+  <select class="flow-select tramiteVig"><option value="">--Seleccionar--</option><option>3 años - $1,730 MXN</option><option>6 años - $2,350 MXN</option><option>10 años - $4,120 MXN</option></select>
+  </div></div>`).join('');
+}
+function continueTramite(){
+  if([...document.querySelectorAll('.tramiteTipo,.tramiteVig')].some(x=>!x.value)){alert('Seleccione el tipo de trámite y la vigencia para continuar.');return;}
+  buildNationality();go('nationality');
+}
+function buildNationality(){
+  document.getElementById('nationalityCards').innerHTML=demoCurps.map(c=>`
+  <div class="flow-card"><div class="flow-head">Nacionalidad -<br>${esc(c)}</div><div class="flow-body">
+  <select class="flow-select nationalitySelect"><option value="">--Seleccionar--</option><option>Mexicana</option><option>Extranjera</option></select>
+  </div></div>`).join('');
+}
+function continueNationality(){
+  if([...document.querySelectorAll('.nationalitySelect')].some(x=>!x.value)){alert('Seleccione la nacionalidad para continuar.');return;}
+  buildOffices();go('office');
+}
+
+const officeData={
+"Aguascalientes":["Oficina Central - CENTRO COMERCIAL EL DORADO, AV. LAS AMÉRICAS No. 1701, P.B., FRACC. EL DORADO, COL. SANTA ELENA 2° SECCIÓN, C.P. 20238, AGUASCALIENTES, AGS.","Oficina de Enlace Calvillo - PROLONGACIÓN INDEPENDENCIA No. 201 ESQ. GUANAJUATO, PALACIO DE JUSTICIA Y ADMINISTRACIÓN, COL. LOS ÁNGELES, C.P. 20800, CALVILLO, AGS."],
+"Baja California":["Oficina Central Mexicali - CALLE MÉXICO 161, LOTES 20 Y 21, MANZANA 35, PRIMERA SECCIÓN, COL. CENTRO, C.P. 21000, MEXICALI, B.C.","Oficina de Enlace Mexicali - CALLE NOVENA Y CARRETERA A SAN LUIS, CENTRO COMERCIAL POPULAR S/N, LOCALES 3 Y 4, MEXICALI, B.C.","Oficina de Pasaportes Tijuana - CENTRO COMERCIAL PAVILION PLAZA TIJUANA, AV. PASEO DE LOS HÉROES 9111, 2º PISO, ESQ. AV. GRAL. M. MÁRQUEZ DE LEÓN, C.P. 22010, TIJUANA, B.C.","Oficina de Enlace Ensenada - AV. REFORMA No. 80, C.P. 22880, ENSENADA, B.C., DENTRO DEL DIF MUNICIPAL.","Oficina de Enlace Playas de Rosarito - BLVD. BENITO JUÁREZ, ZONA CENTRO, C.P. 22710, PLAYAS DE ROSARITO, B.C."],
+"Baja California Sur":["Oficina de Pasaportes en Baja California Sur - Ignacio Ramírez No. 3035 esq. Sonora, Col. Pueblo Nuevo, C.P. 23060, La Paz, B.C.S."],
+"Campeche":["Oficina Central - AV. 16 DE SEPTIEMBRE S/N, PALACIO FEDERAL, 1er PISO, COL. CENTRO, C.P. 24000, SAN FRANCISCO DE CAMPECHE, CAMP.","Oficina de Enlace Municipal Ciudad del Carmen - CALLE 20 X 31, COL. CENTRO, C.P. 24100, CIUDAD DEL CARMEN, CAMP."],
+"Chiapas":["Oficina Central - TORRE CHIAPAS, BLVD. ANDRÉS SERRA ROJAS No. 1090, 1er PISO, COL. PASO LIMÓN, C.P. 29405, TUXTLA GUTIÉRREZ, CHIAPAS","Oficina de Enlace Comitán, Chis. - BOULEVARD SUR DR. BELISARIO DOMÍNGUEZ, EDIFICIO DE SEGURIDAD PÚBLICA, 2º PISO, C.P. 30000, COMITÁN DE DOMÍNGUEZ, CHIAPAS","Delegación Tapachula - 3a SUR No. 45 A, ENTRE 6a Y 8a ORIENTE, C.P. 30700, TAPACHULA, CHIAPAS"],
+"Chihuahua":["Oficina de Enlace Municipal Cuauhtémoc, Chih. - CALLE MORELOS Y 23, FRACCIONAMIENTO SAN ANTONIO, COL. CENTRO, C.P. 31501","Oficina de Enlace Municipal Delicias, Chih. - AV. SEXTA ORIENTE Y PRIMERA ORIENTE, COL. CENTRO, C.P. 33000","Oficina de Enlace Municipal en Hidalgo del Parral, Chih. - CALLE 20 DE NOVIEMBRE S/N, COL. CENTRO, C.P. 33800, FRENTE A LA PLAZA PRINCIPAL, HIDALGO DEL PARRAL, CHIH."],
+"Ciudad de México":[
+"Oficina de Pasaportes Coyoacán - Centro Comercial Punto MAQ, Local S2-021, Miguel Ángel de Quevedo No. 1144, Col. Parque San Andrés, C.P. 04010, Coyoacán, CDMX",
+"Oficina de Pasaportes Miguel Hidalgo II - Galerías Plaza de las Estrellas, Local S-2, Av. Melchor Ocampo No. 193, Col. Verónica Anzures, C.P. 11300, CDMX",
+"Oficina de Pasaportes Zona Norte - Parque Tepeyac, locales LS27 al 35, Calz. San Juan de Aragón No. 389, Col. Granjas Modernas, C.P. 07460, CDMX",
+"Oficina de Pasaportes Zona Oriente - Parque Las Antenas, Av. Periférico No. 3278, Col. Esperanza, C.P. 09910, Iztapalapa, CDMX"
+],
+"Coahuila":["Oficina Central - BOULEVARD LAS QUINTAS No. 50, LOCALES 17, 18, 19 Y ANEXO, COL. QUINTAS SAN ISIDRO, TORREÓN, COAHUILA, PLAZA INDEPENDENCIA, C.P. 27016","Oficina de Enlace Municipal en Gómez Palacio, Dgo. - PRIMER PISO PRESIDENCIA MUNICIPAL, AV. FRANCISCO I. MADERO No. 400 NORTE, C.P. 35000, GÓMEZ PALACIO, DGO.","Oficina de Enlace Municipal en Acuña, Coah. - CALLE H. MATAMOROS ESQ. CALLE REFORMA No. 660, ZONA CENTRO, C.P. 26200, ACUÑA, COAHUILA","Oficina de Enlace Municipal en Monclova, Coah. - BOULEVARD HAROLD R. PAPE ESQ. BLVD. FRANCISCO I. MADERO, ANEXO CANACO, COL. GUADALUPE, C.P. 25700","Oficina de Enlace Municipal en Piedras Negras, Coah. - BLVD. PLAZA DE LAS CULTURAS No. 620, COL. GONZÁLEZ, C.P. 26020, PIEDRAS NEGRAS, COAHUILA","Oficina de Enlace San Juan de Sabinas, Coah. - LOCALIDAD DE NUEVA ROSITA, MUNICIPIO DE SAN JUAN DE SABINAS, COAHUILA DE ZARAGOZA","Oficina de Enlace Municipal en Saltillo, Coah. - PADRE FLORES No. 181, ZONA CENTRO, C.P. 25000, SALTILLO, COAHUILA"],
+"Colima":["Oficina de Pasaportes en Colima - Centro Comercial Sendera, Av. Miguel de la Madrid Hurtado No. 271, Col. Real Hacienda, C.P. 28978, Villa de Álvarez, Col."],
+"Durango":["Oficina Central - CENTRO COMERCIAL PASEO DURANGO, BOULEVARD FELIPE PESCADOR No. 1401, LOCAL A05, COL. ESPERANZA, C.P. 34080, DURANGO, DURANGO","Oficina de Enlace Santiago Papasquiaro, Dgo. - CALLE BRUNO MARTÍNEZ No. 206, INTERIOR B, ENTRE ARROYO TAGARETE Y LEYVA, SANTIAGO PAPASQUIARO, DGO., C.P. 34600","Oficina de Enlace Nuevo Ideal, Dgo. - JOSÉ RAMÓN VALDEZ No. 503, ZONA CENTRO, NUEVO IDEAL, DGO."],
+"Estado de México":["Oficina de Enlace Valle de Bravo, Edo. de Méx. - CALLE NICOLÁS BRAVO No. 300B, COL. CENTRO, C.P. 51200, VALLE DE BRAVO, ESTADO DE MÉXICO","Delegación Cuautitlán Izcalli - AV. LA SUPER S/N, EDIFICIO OPERAGUA IZCALLI, LOCAL A-1, CENTRO URBANO CUAUTITLÁN, CUAUTITLÁN IZCALLI, ESTADO DE MÉXICO, C.P. 54700","Delegación Texcoco - CALLE NEZAHUALCÓYOTL No. 110, COL. CENTRO, C.P. 56100, TEXCOCO, ESTADO DE MÉXICO","Delegación Tlalnepantla - BOULEVARD MANUEL ÁVILA CAMACHO 1007, LOCAL 3-C, SEGUNDO PISO, COL. SAN LUCAS, TLALNEPANTLA DE BAZ, ESTADO DE MÉXICO"],
+"Guanajuato":["Oficina Central León - PLAZA GALERÍA LAS TORRES, BLVD. JUAN ALONSO DE TORRES ORIENTE No. 1315, COL. SAN JOSÉ DEL CONSUELO, C.P. 37200, LEÓN, GTO.","Oficina de Enlace Acámbaro - IGNACIO ZARAGOZA No. 35, ZONA CENTRO, C.P. 38600, ACÁMBARO, GTO.","Oficina de Enlace Celaya - CALZADA INDEPENDENCIA No. 124-A, P.B., ZONA CENTRO, C.P. 38000, CELAYA, GTO.","Oficina de Enlace Irapuato - PLAZA FRAGARIA, LOCALES D005-D006, AV. PASEO SOLIDARIDAD No. 13588, EJIDO LO DE JUÁREZ, C.P. 36620, IRAPUATO, GTO.","Oficina de Enlace Salamanca - AV. FAJA DE ORO 1502, LOCAL 3-A, COL. GUADALUPE, C.P. 36747, SALAMANCA, GTO.","Oficina de Enlace León - PLAZA MAYOR, BLVD. JUAN ALONSO DE TORRES No. 2002, LOCAL 71, COL. VALLE DEL CAMPESTRE, C.P. 37129, LEÓN, GTO.","Oficina de Enlace San Felipe - CASA JUÁREZ, PLANTA ALTA, ZONA CENTRO, C.P. 37600, SAN FELIPE, GTO.","Oficina de Enlace Pénjamo - CALLE 5 DE MAYO No. 13-A, ZONA CENTRO, C.P. 36900, PÉNJAMO, GTO.","Oficina de Enlace Yuriria - CALLE VICTORIA No. 9, ZONA CENTRO, C.P. 38940, YURIRIA, GTO."],
+"Guerrero":["Oficina de Pasaportes en Guerrero - Centro de Congresos Copacabana, Av. Costera Miguel Alemán No. 63, Local C-16, 2º nivel, Fracc. Club Deportivo, C.P. 39690, Acapulco, Gro."],
+"Hidalgo":["Oficina Central Pachuca - VÍA DORADA, AV. FERROCARRIL CENTRAL 121, LOCAL 5, ZONA PLATEADA, C.P. 42084, PACHUCA DE SOTO, HGO.","Oficina de Enlace Tepeji del Río - PALACIO MUNICIPAL, COL. CENTRO, C.P. 42850, TEPEJI DEL RÍO, HGO.","Oficina de Enlace Tulancingo - PLAZA MANUEL FERNANDO SOTO S/N, FRACC. LOS PINOS, C.P. 43626, TULANCINGO, HGO.","Oficina de Enlace Actopan - CALLE HIDALGO No. 20, COL. CENTRO, C.P. 42500, ACTOPAN, HGO.","Oficina de Enlace Apan - PLAZA DE LA INDEPENDENCIA S/N, COL. CENTRO, C.P. 43900, APAN, HGO."],
+"Jalisco":["Oficina Central - CENTRO COMERCIAL PLAZA BONITA, AV. MÉXICO No. 3370, COL. VILLA SANTA RITA, C.P. 44690, GUADALAJARA, JALISCO","Oficina de Enlace Ameca, Jal. - CALLE ZARAGOZA No. 66, COL. CENTRO, C.P. 46600","Oficina de Enlace Arandas, Jal. - CALLE ÁLVARO OBREGÓN 50, UNIDAD ADMINISTRATIVA No. 1, COL. CENTRO, ARANDAS, JALISCO","Oficina de Enlace Colotlán, Jal. - UNIRSE (UNIDAD REGIONAL DE SERVICIOS DEL ESTADO), PLANTA BAJA, KM 01 CARRETERA COLOTLÁN-GUADALAJARA, JALISCO, C.P. 46200","Oficina de Enlace Etzatlán, Jal. - INDEPENDENCIA 227, EDIF. PRESIDENCIA MUNICIPAL, COL. CENTRO, C.P. 46500","Oficina de Enlace Guadalajara, Jal. - AV. VALLARTA No. 3233, DENTRO DE PLAZA EXHIMODA, LOCALES 6F Y 7F, GUADALAJARA, JALISCO","Oficina de Enlace Ocotlán, Jal. - MORELOS No. 20, COL. CENTRO, C.P. 47800","Oficina de Enlace Tepatitlán de Morelos, Jal. - MATAMOROS LOCAL No. 21, COL. CENTRO, C.P. 47600","Oficina de Enlace Tlaquepaque, Jal. - UNIDAD ADMINISTRATIVA LA PILA SECA, LOCAL No. 2, COL. CENTRO, C.P. 45500","Oficina de Enlace Tlaquepaque Sur, Jal. - CENTRO COMERCIAL CENTRO SUR, ANILLO PERIFÉRICO SUR No. 7835, PRIMER PISO, LOCALES 25A Y 25B, JALISCO","Oficina de Enlace Tonalá, Jal. - AV. RÍO NILO No. 8096, EXPLANADA WAL-MART, COL. LOMA DORADA, C.P. 45400","Oficina de Enlace Zapopan, Jal. - AV. GUADALUPE No. 6000, COL. CHAPALITA, C.P. 45070","Oficina de Enlace Lagos de Moreno, Jal. - NICOLÁS BRAVO No. 714, COL. CENTRO, LAGOS DE MORENO, JALISCO","Oficina de Enlace Puerto Vallarta, Jal. - CALLE INDEPENDENCIA No. 123, COL. CENTRO, PUERTO VALLARTA, JALISCO, C.P. 48300"],
+"Michoacán":["Oficina de Enlace Peribán de Ramos, Mich. - OCAMPO No. 1, COL. CENTRO, C.P. 60440, PERIBÁN, MICHOACÁN","Oficina de Enlace Sahuayo, Mich. - BOULEVARD LÁZARO CÁRDENAS SUR No. 1190, LOCAL 83, PLAZA FERIA SAHUAYO, COL. NORIA DE MONTES, SAHUAYO, MICHOACÁN","Oficina de Enlace Uruapan, Mich. - AV. CHIAPAS No. 93, INTERIOR 201, COL. RAMÓN FARÍAS, C.P. 60050, URUAPAN, MICHOACÁN"],
+"Morelos":["Oficina Central - LOCALES 12 AL 16, AV. PLAN DE AYALA No. 501, COL. TEOPANZOLCO, CUERNAVACA, MORELOS"],
+"Nayarit":["Oficina Central - AV. INSURGENTES No. 1121 ORIENTE, COL. LOS LLANITOS, C.P. 63170, TEPIC, NAYARIT."],
+"Nuevo León":["Oficina de Enlace Apodaca, N.L. - 5 DE MAYO No. 103, LOCALES 5 Y 6, COL. CENTRO, C.P. 66600","Oficina de Enlace General Escobedo, N.L. - AV. MANUEL L. BARRAGÁN No. 220, ACCESO 5, LOCAL 55, COL. EX HACIENDA EL CANADÁ, C.P. 66054","Oficina de Enlace Guadalupe, N.L. - GRAN PARQUE GUADALUPE, UNIDAD TOLTECA, AV. TOLTECA ESQ. RÍO LA SILLA S/N, COL. TOLTECA, C.P. 67100","Oficina de Enlace Monterrey, N.L. (Parque España) - AV. MORONES PRIETO S/N, FRACC. BUENOS AIRES, PARQUE ESPAÑA, C.P. 64810","Oficina de Enlace Monterrey, N.L. III (Parque Tucán) - AV. COMISIÓN TRIPARTITA Y URANIO, COL. VALLE DE INFONAVIT 5º SECTOR, INTERIOR PARQUE TUCÁN, MONTERREY, N.L.","Oficina de Enlace San Nicolás de los Garza, N.L. - AV. JUÁREZ No. 655 PONIENTE, ENTRE RAYÓN Y CORREGIDORA, SAN NICOLÁS DE LOS GARZA, N.L."],
+"Oaxaca":["Delegación Oaxaca - CALLE ÁLAMOS No. 603, COL. REFORMA, C.P. 68050, OAXACA DE JUÁREZ, OAXACA"],
+"Puebla":["Oficina Central - PRIMER NIVEL DEL CENTRO COMERCIAL PASEO SAN FRANCISCO, CALLE ARROYO DE XONACA No. 1006, BARRIO DEL ALTO, C.P. 72290, PUEBLA, PUEBLA.","Oficina de Enlace Izúcar de Matamoros - CALLE COMONFORT S/N, COL. CENTRO, C.P. 74400, IZÚCAR DE MATAMOROS, PUEBLA.","Oficina de Enlace Tecamachalco - AV. HIDALGO 407, COL. CENTRO, TECAMACHALCO, PUEBLA.","Oficina de Enlace Tehuacán - CALLE RAYÓN No. 7, COL. CENTRO, C.P. 75700, TEHUACÁN, PUEBLA.","Oficina de Enlace Tepeaca - CALLE 6 NORTE No. 201-A, BARRIO SANTA CRUZ TEMILCO, C.P. 75200, TEPEACA, PUEBLA.","Oficina de Enlace Tlatlauquitepec - REFORMA No. 47, COL. CENTRO, TLATLAUQUITEPEC, PUEBLA."],
+"Querétaro":["Oficina Central - BOULEVARD BERNARDO QUINTANA No. 112, COL. CARRETAS, SANTIAGO DE QUERÉTARO, C.P. 76050","Oficina de Enlace en Corregidora, Qro. - AV. PROLONGACIÓN CANDILES 204, COL. FRACC. CAMINO REAL, ENTRE CAMINO REAL Y BLVD. CAMINO REAL, LOCALES A-01 AL A-05, C.P. 76190, CORREGIDORA, QRO.","Oficina de Enlace San Juan del Río, Qro. - CALLE ING. LEOPOLDO PERALTA S/N, ACECUCOA, COL. RAMOS MILLÁN, SAN JUAN DEL RÍO, QRO., C.P. 76807","Oficina de Enlace Municipal en San Miguel de Allende, Gto. - EDIFICIO ADMINISTRATIVO, BLVD. DE LA CONSPIRACIÓN, SAN MIGUEL DE ALLENDE, GTO."],
+"Quintana Roo":["Oficina de Pasaportes en Quintana Roo - Centro Comercial Kukulcán Plaza, Blvd. Kukulcán, Mza. 53, Lote 8, Sección A, Zona Turística, C.P. 77500, Cancún, Q. Roo"],
+"San Luis Potosí":["Oficina Central - RÍO NAZAS No. 180 Y 190, COL. LOMAS LOS FILTROS, C.P. 78210, SAN LUIS POTOSÍ, S.L.P.","Oficina de Enlace Cd. Valles, S.L.P. - BOCANEGRA 28, LOCAL A, COL. OBRERA, C.P. 79050","Oficina de Enlace Matehuala, S.L.P. - GALEANA S/N, ZONA CENTRO, C.P. 78700","Oficina de Enlace Río Verde, S.L.P. - BENITO JUÁREZ NORTE 101, ESQ. GABRIEL MARTÍNEZ, COL. CENTRO, C.P. 79610"],
+"Sinaloa":[
+"Oficina Central - PLANTA BAJA Y MEZZANINE, TORRE TRES AFLUENCIAS UBICADO EN BOULEVARD ALFONSO ZARAGOZA MAYTORENA No. 1780 PONIENTE, DESARROLLO URBANO TRES RÍOS, C.P. 80020, CULIACÁN, SINALOA",
+"Oficina de Enlace Guasave, Sin. - AV. ADOLFO LÓPEZ MATEOS S/N, COL. DEL BOSQUE, C.P. 81020, GUASAVE, SINALOA",
+"Oficina de Enlace Ahome, Sin. (Los Mochis) - PALACIO MUNICIPAL DE AHOME, DEGOLLADO S/N, COL. CENTRO, C.P. 81200, LOS MOCHIS, SINALOA",
+"Oficina de Enlace Mazatlán, Sin. - CALLE CAMPANA S/N, COL. CENTRO, ESQ. ÁNGEL FLORES, C.P. 82000, MAZATLÁN, SINALOA"
+],
+"Sonora":["Oficina de Enlace Caborca, Son. - CALLE 6TA. ESQ. AVENIDA O, COL. CENTRO, CABORCA, SONORA, C.P. 83600","Oficina de Enlace Cd. Obregón, Son. - SUFRAGIO EFECTIVO ESQ. GUERRERO, INTERIOR S/N, COL. CENTRO, EDIFICIO YAQUI FORUM, SONORA","Oficina de Enlace Guaymas, Son. - ALFONSO IBERRI No. 75, INTERIOR 14, COL. CENTRO, GUAYMAS, SONORA","Oficina de Enlace Navojoa, Son. - CALLE ALLENDE ESQ. CALLE TALAMANTE S/N, COL. REFORMA, C.P. 85830","Oficina de Enlace Nogales, Son. - AV. PLUTARCO ELÍAS CALLES No. 898, LOCAL 4, ENTRE CALLE RUIZ CORTINES Y AV. ÁLVARO OBREGÓN, COL. LA MODERNA, C.P. 84055"],
+"Tabasco":["Oficina de Pasaportes en Tabasco - Calle Juan Estrada, Torre No. 101, Local 10, Plaza Strada, Col. Primero de Mayo, C.P. 86190, Villahermosa, Tab."],
+"Tamaulipas":["Oficina de Enlace Matamoros, Tamps. - CALLE PRIMERA Y AV. CONSTITUCIÓN S/N, C.P. 87330","Oficina de Enlace Nuevo Laredo, Tamps. - GUERRERO ENTRE MACLOVIO HERRERA Y HÉROES DE NACATAZ, CENTRO, C.P. 88000","Oficina de Enlace Reynosa, Tamps. - ZARAGOZA No. 496, ENTRE OCAMPO Y CANALES, ZONA CENTRO, C.P. 88500, REYNOSA, TAMAULIPAS"],
+"Tlaxcala":["Oficina de Pasaportes en Tlaxcala - Blvd. Emilio Sánchez Piedras No. 409-1, Centro Comercial La Antigua Estación, Col. Centro, C.P. 90300, Apizaco, Tlax."],
+"Veracruz":["Oficina Central - BOULEVARD CRISTÓBAL COLÓN No. 5, FRACC. AMPLIACIÓN JARDINES DE LAS ÁNIMAS, SECCIÓN TORRE ÁNIMAS, XALAPA, VERACRUZ, C.P. 91190","Oficina de Enlace Boca del Río, Ver. - AV. LAS AMÉRICAS S/N, ENTRE CARRETERA BOTICARIA MOCAMBO Y RUIZ CORTINEZ, COL. YLANG YLANG, LOCAL 3, ZONA T, BOCA DEL RÍO, VER., C.P. 94290","Oficina de Enlace Córdoba, Ver. - CALLE 1 ENTRE AVENIDA 3 Y 5 No. 306, COL. CENTRO, CÓRDOBA, VERACRUZ, C.P. 94500","Oficina de Enlace Tuxpan, Ver. - AV. JUÁREZ S/N, COL. CENTRO, C.P. 92800, TUXPAN, VERACRUZ","Oficina de Enlace Papantla, Ver. - CALLE ARTES S/N, COL. CENTRO, PAPANTLA DE OLARTE, VERACRUZ, C.P. 93400"],
+"Yucatán":["Delegación Yucatán - CALLE 56 A No. 442, LOCALES 101, 103, 105, 107, 109, 03 Y 05, PASEO MONTEJO, C.P. 97000, MÉRIDA, YUCATÁN"],
+"Zacatecas":["Oficina de Enlace Fresnillo, Zac. - FRANCISCO JAVIER MINA No. 111, ESQ. 18 DE MARZO, C.P. 99000","Oficina de Enlace Jerez de García Salinas, Zac. - CALLE JUÁREZ No. 1 ESQ. PORTAL HUMBOLT, CENTRO, C.P. 99300","Oficina de Enlace Sombrerete, Zac. - HIDALGO No. 232-F, CENTRO, C.P. 99100","Oficina de Enlace Juan Aldama, Zac. - AV. CENTENARIO SUR No. 33, CENTRO, C.P. 98300"]
+};
+
+function buildOffices(){
+  document.getElementById('officeCards').innerHTML=demoCurps.map((c,i)=>`
+  <div class="flow-card"><div class="flow-head">Seleccione Oficina<br><span style="font-size:20px;font-weight:400">CURP: ${esc(c)}</span></div><div class="flow-body">
+  <div class="flow-label">ESTADO</div>
+  <select class="flow-select stateSelect" data-i="${i}" onchange="updateOffice(this)">
+  <option value="">--Seleccione estado--</option>${Object.keys(officeData).map(s=>`<option>${s}</option>`).join('')}</select>
+  <div class="flow-label">OFICINA Y DIRECCIÓN</div>
+  <select class="flow-select officeSelect flow-disabled" data-i="${i}" disabled onchange="updateMapsButton(this)"><option value="">Primero seleccione estado</option></select>
+  <div style="text-align:center;margin:14px 0 10px">
+    <button type="button" class="mapsBtn" data-i="${i}" onclick="openOfficeInMaps(${i})"
+      style="display:none;border:0;border-radius:7px;background:#63c9e8;color:#111;font-size:17px;padding:11px 18px;cursor:pointer">
+      📍 Ver ubicación en Google Maps
+    </button>
+  </div>
+  
+  </div></div>`).join('');
+}
+function updateOffice(sel){
+  const target=document.querySelector(`.officeSelect[data-i="${sel.dataset.i}"]`);
+  const arr=officeData[sel.value]||[];
+  target.disabled=!arr.length;
+  target.classList.toggle('flow-disabled',!arr.length);
+  target.innerHTML=arr.length?'<option value="">--Seleccione oficina--</option>'+arr.map(x=>`<option>${x}</option>`).join(''):'<option>Primero seleccione estado</option>';
+  updateMapsButton(target);
+}
+function updateMapsButton(sel){
+  const btn=document.querySelector(`.mapsBtn[data-i="${sel.dataset.i}"]`);
+  if(!btn)return;
+  btn.style.display=(!sel.disabled && sel.value)?'inline-block':'none';
+}
+function openOfficeInMaps(i){
+  const sel=document.querySelector(`.officeSelect[data-i="${i}"]`);
+  if(!sel || !sel.value)return;
+  const query=encodeURIComponent(sel.value);
+  window.open('https://www.google.com/maps/search/?api=1&query='+query,'_blank','noopener,noreferrer');
+}
+function continueOffice(){
+  if([...document.querySelectorAll('.officeSelect')].some(x=>x.disabled||!x.value)){alert('Seleccione una oficina para continuar.');return;}
+  const h=document.getElementById('dateCurp');if(h)h.textContent=demoCurps[0]||'CURP';
+  go('date');
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  renderCurps();
+  const buttons=[...document.querySelectorAll('#home .bigbtn')];
+  if(buttons[0])buttons[0].onclick=()=>beginFlow('personal');
+  if(buttons[1])buttons[1].onclick=()=>beginFlow('family');
+});
+
+let demoConfirmationFolio = "";
+
+function demoNowString(){
+  const d=new Date();
+  const dd=String(d.getDate()).padStart(2,'0');
+  const mm=String(d.getMonth()+1).padStart(2,'0');
+  const yyyy=d.getFullYear();
+  let h=d.getHours(), min=String(d.getMinutes()).padStart(2,'0');
+  const ap=h>=12?'pm':'am';
+  const h12=(h%12)||12;
+  return `${dd}/${mm}/${yyyy} ${h12}:${min} ${ap}`;
+}
+function makeDemoFolio(){
+  if(demoConfirmationFolio) return demoConfirmationFolio;
+  const d=new Date();
+  const stamp=`${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}-${String(d.getHours()).padStart(2,'0')}${String(d.getMinutes()).padStart(2,'0')}`;
+  const rnd=Math.random().toString(36).slice(2,10).toUpperCase();
+  demoConfirmationFolio=`MEX-${stamp}-${rnd}`;
+  return demoConfirmationFolio;
+}
+function buildConfirmationSummary(){
+  const f=document.getElementById('confirmTramiteFecha');
+  const fol=document.getElementById('confirmFolio');
+  const citas=document.getElementById('confirmCitas');
+  if(f) f.textContent=demoNowString();
+  if(fol) fol.textContent=makeDemoFolio();
+  if(!citas) return;
+
+  const curps=[...document.querySelectorAll('.curpInput')].map(x=>x.value.replace(/\s+/g,'').toUpperCase()).filter(Boolean);
+  const dateEl=document.querySelector('input[type="date"]');
+  const timeEl=document.getElementById('hora');
+  const date=dateEl?.value || 'Fecha no seleccionada';
+  const time=timeEl?.options?.[timeEl.selectedIndex]?.text || timeEl?.value || 'Hora no seleccionada';
+
+  const offices=[...document.querySelectorAll('.officeSelect')];
+  citas.innerHTML=curps.map((curp,i)=>{
+    const sel=offices[i] || offices[0];
+    const office=sel?.value || 'Oficina no seleccionada';
+    const maps='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(office);
+    return `<div style="margin-top:18px"><b>Fecha de cita ${i+1}:</b><br>${curp} el ${date}, Hora: ${time} en ${office} <a href="${maps}" target="_blank" rel="noopener noreferrer">(Ver mapa)</a></div>`;
+  }).join('');
+}
+
+
+document.addEventListener('click',function(){
+  setTimeout(function(){
+    const target=document.getElementById('confirmTramiteFecha');
+    if(target && target.offsetParent!==null) buildConfirmationSummary(); buildApplicantAndPaymentSummary();
+  },30);
+});
+
+
+function moneyMXN(n){
+  return Number(n||0).toLocaleString('es-MX',{minimumFractionDigits:2,maximumFractionDigits:2});
+}
+function parseDemoPrice(text){
+  const m=String(text||'').replace(/,/g,'').match(/\$?\s*(\d+(?:\.\d+)?)/);
+  return m?Number(m[1]):0;
+}
+function buildApplicantAndPaymentSummary(){
+  const body=document.getElementById('applicantSummaryBody');
+  const pay=document.getElementById('demoPaymentSummaryBody');
+  if(!body || !pay) return;
+
+  const curps=[...document.querySelectorAll('.curpInput')]
+    .map(x=>x.value.replace(/\s+/g,'').toUpperCase()).filter(Boolean);
+  const vigSelects=[...document.querySelectorAll('.tramiteVig')];
+  const dateEl=document.querySelector('input[type="date"]');
+  const timeEl=document.getElementById('hora');
+  const date=dateEl?.value || '—';
+  const time=timeEl?.options?.[timeEl.selectedIndex]?.text || timeEl?.value || '—';
+
+  const datos=curps.map((curp,i)=>{
+    const sel=vigSelects[i];
+    const txt=(sel?.options?.[sel.selectedIndex]?.text || '').trim();
+    const vig=(txt.match(/(\d+\s*años?)/i)||[])[1] || '—';
+    const priceMatch=txt.replace(/,/g,'').match(/\$\s*(\d+(?:\.\d+)?)/);
+    const price=priceMatch?Number(priceMatch[1]):0;
+    return {curp,vig,price};
+  });
+
+  body.innerHTML=datos.map((d,i)=>`
+    <div style="margin-bottom:24px">
+      <div><b>Solicitante ${i+1}:</b> ${d.curp}</div>
+      <div>Vigencia: ${d.vig}</div>
+      <div>Precio: ${moneyMXN(d.price)} m.n.</div>
+      <div>Fecha de cita: ${date}, Hora: ${time}</div>
+    </div>`).join('');
+
+  const total=datos.reduce((sum,d)=>sum+d.price,0);
+
+  pay.innerHTML=`
+    <div style="font-size:22px;font-weight:700;margin-bottom:15px">
+      Pago por ${datos.length} pasaporte${datos.length===1?'':'s'}:
+    </div>
+    ${datos.map(d=>`
+      <div style="margin-bottom:8px">
+        ${d.curp} — <b>Vigencia: ${d.vig}</b> — ${moneyMXN(d.price)} m.n.
+      </div>`).join('')}
+    <div style="font-size:22px;font-weight:700;margin-top:18px">
+      Importe total: ${moneyMXN(total)} m.n.
+    </div>`;
+}
+
+
+function buildTransferSummary(){
+  const fecha=document.getElementById('transferFechaTramite');
+  const folio=document.getElementById('transferFolio');
+  const citas=document.getElementById('transferCitas');
+  if(!fecha || !folio || !citas) return;
+
+  fecha.textContent=demoNowString();
+  folio.textContent=makeDemoFolio();
+
+  const curps=[...document.querySelectorAll('.curpInput')]
+    .map(x=>x.value.replace(/\s+/g,'').toUpperCase()).filter(Boolean);
+  const dateEl=document.querySelector('input[type="date"]');
+  const timeEl=document.getElementById('hora');
+  const date=dateEl?.value || '—';
+  const time=timeEl?.options?.[timeEl.selectedIndex]?.text || timeEl?.value || '—';
+  const offices=[...document.querySelectorAll('.officeSelect')];
+
+  citas.innerHTML=curps.map((curp,i)=>{
+    const sel=offices[i] || offices[0];
+    const office=sel?.value || 'Oficina no seleccionada';
+    const maps='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(office);
+    return `<div style="margin-top:12px">
+      <b>Fecha de cita ${i+1}:</b><br>
+      ${curp} el ${date}, Hora: ${time} en ${office}
+      <a href="${maps}" target="_blank" rel="noopener noreferrer">(Ver mapa)</a>
+    </div>`;
+  }).join('');
+}
+
+document.addEventListener('click',function(){
+  setTimeout(function(){
+    const box=document.getElementById('transferFechaTramite');
+    if(box && box.offsetParent!==null) buildTransferSummary();
+  },40);
+});
+
+
+async function copyDemoText(id){
+  const el=document.getElementById(id);
+  if(!el)return;
+  const value=el.textContent.trim();
+  try{
+    await navigator.clipboard.writeText(value);
+  }catch(e){
+    const ta=document.createElement('textarea');
+    ta.value=value; document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); ta.remove();
+  }
+}
+function updateBankDemoAmount(){
+  const el=document.getElementById('bankDemoAmount');
+  if(!el)return;
+
+  let total=0;
+
+  // 1) Leer directamente los selectores reales de vigencia/precio.
+  const sels=[...document.querySelectorAll('.tramiteVig')];
+  const vigencias=sels.map(sel=>{
+    const opt=sel.options?.[sel.selectedIndex];
+    const txt=(opt?.textContent || opt?.text || '').trim();
+    return (txt.match(/(\d+\s*años?)/i)||[])[1] || '';
+  }).filter(Boolean);
+  const vigEl=document.getElementById('bankDemoVigencia');
+  if(vigEl){
+    const unicas=[...new Set(vigencias)];
+    vigEl.textContent=unicas.length===1
+      ? 'Vigencia seleccionada: '+unicas[0]
+      : (unicas.length>1 ? 'Vigencias seleccionadas: '+unicas.join(', ') : 'Vigencia seleccionada: —');
+  }
+  sels.forEach(sel=>{
+    const opt=sel.options?.[sel.selectedIndex];
+    const txt=(opt?.textContent || opt?.text || '').trim();
+    const val=(opt?.value || '').trim();
+
+    // Acepta formatos como "$1,730", "3 años - $1,730",
+    // y también valores numéricos guardados en value.
+    let m=txt.replace(/,/g,'').match(/\$\s*(\d+(?:\.\d+)?)/);
+    if(m){
+      total+=Number(m[1]);
+      return;
+    }
+    m=val.replace(/,/g,'').match(/(?:^|[^\d])(\d{3,6}(?:\.\d+)?)(?:$|[^\d])/);
+    if(m) total+=Number(m[1]);
+  });
+
+  // 2) Respaldo: si no se pudo leer el selector, usar el total ya
+  // calculado en la tabla/resumen de solicitantes.
+  if(total===0){
+    const candidates=[
+      document.getElementById('applicantTableFoot'),
+      document.getElementById('demoPaymentSummaryBody'),
+      document.getElementById('applicantSummaryBody')
+    ];
+    for(const node of candidates){
+      if(!node)continue;
+      const text=(node.textContent||'').replace(/,/g,'');
+      const amounts=[...text.matchAll(/\$?\s*(\d{3,6}(?:\.\d{1,2})?)\s*(?:MXN|m\.n\.)/gi)]
+        .map(x=>Number(x[1]));
+      if(amounts.length){
+        total=Math.max(...amounts);
+        break;
+      }
+    }
+  }
+
+  const formatted='$'+total.toLocaleString('es-MX',{
+    minimumFractionDigits:2,
+    maximumFractionDigits:2
+  })+' MXN';
+  el.textContent=formatted;
+  const card=document.getElementById('bankCardAmount');
+  if(card) card.textContent=formatted;
+}
+document.addEventListener('click',()=>setTimeout(updateBankDemoAmount,30));
+
+
+function buildApplicantTable(){
+  const tbody=document.getElementById('applicantTableBody');
+  const tfoot=document.getElementById('applicantTableFoot');
+  if(!tbody || !tfoot) return;
+
+  const curps=[...document.querySelectorAll('.curpInput')]
+    .map(x=>x.value.replace(/\s+/g,'').toUpperCase()).filter(Boolean);
+  const vigSelects=[...document.querySelectorAll('.tramiteVig')];
+  const dateEl=document.querySelector('input[type="date"]');
+  const timeEl=document.getElementById('hora');
+  const date=dateEl?.value || '—';
+  const time=timeEl?.options?.[timeEl.selectedIndex]?.text || timeEl?.value || '—';
+
+  let total=0;
+  tbody.innerHTML=curps.map((curp,i)=>{
+    const sel=vigSelects[i];
+    const txt=(sel?.options?.[sel.selectedIndex]?.text || '').trim();
+    const vig=(txt.match(/(\d+\s*años?)/i)||[])[1] || '—';
+    const pm=txt.replace(/,/g,'').match(/\$\s*(\d+(?:\.\d+)?)/);
+    const price=pm?Number(pm[1]):0;
+    total+=price;
+    return `<tr>
+      <td style="border:1px solid #ddd;padding:10px">${i+1}</td>
+      <td style="border:1px solid #ddd;padding:10px">${curp}</td>
+      <td style="border:1px solid #ddd;padding:10px">${vig}</td>
+      <td style="border:1px solid #ddd;padding:10px">$ ${moneyMXN(price)}</td>
+      <td style="border:1px solid #ddd;padding:10px">${date}</td>
+      <td style="border:1px solid #ddd;padding:10px">${time}</td>
+    </tr>`;
+  }).join('');
+
+  tfoot.innerHTML=`<tr style="font-weight:700">
+    <td colspan="2" style="border:1px solid #ddd;padding:10px">TOTAL:</td>
+    <td style="border:1px solid #ddd;padding:10px">${curps.length} persona(s)</td>
+    <td colspan="3" style="border:1px solid #ddd;padding:10px">$${moneyMXN(total)} MXN</td>
+  </tr>`;
+}
+document.addEventListener('click',function(){
+  setTimeout(function(){
+    const box=document.getElementById('applicantTableBox');
+    if(box && box.offsetParent!==null) buildApplicantTable();
+  },40);
+});
+
+
+const demoOpinions=[
+  ["Roberto García","Monterrey, México","Me sacó de un apuro. Necesitaba conseguir mi cita para el pasaporte y todo el proceso fue rápido y sencillo."],
+  ["María Sánchez","Puebla, México","Excelente servicio, pude realizar todo sin complicaciones y mi cita quedó justo como la necesitaba."],
+  ["Carlos Ramírez","Guadalajara, México","Me salvó la vida porque necesitaba la cita con urgencia. Todo fue muy eficiente y fácil de seguir."],
+  ["Ana López","Mérida, México","Todo salió muy bien con mi cita. El proceso fue claro, rápido y no tuve ningún problema."],
+  ["Luis Hernández","Tijuana, México","Muy eficiente. Encontré una fecha que me funcionaba y pude completar todo el proceso sin complicaciones."],
+  ["Sofía Martínez","Querétaro, México","Me ayudó muchísimo para organizar mi cita del pasaporte. Todo fue rápido y fácil de entender."],
+  ["Jorge Castillo","Culiacán, México","Necesitaba resolver lo de mi cita cuanto antes y me sacó del apuro. Todo salió excelente."],
+  ["Fernanda Torres","Veracruz, México","Muy buena experiencia. El proceso para seleccionar mi cita fue sencillo y todo quedó listo sin problemas."]
+];
+let demoOpinionOffset=0;
+function renderDemoOpinions(){
+  const box=document.getElementById('demoTestimonialCards');
+  if(!box)return;
+  const picks=[0,1].map(k=>demoOpinions[(demoOpinionOffset+k)%demoOpinions.length]);
+  box.innerHTML=picks.map((o,k)=>{
+    const mins=((demoOpinionOffset*3+k*7)%28)+1;
+    return `<div style="border:1px solid #ccc;border-radius:8px;padding:18px;margin-bottom:16px">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap">
+        <div><b style="font-size:20px">${o[0]}</b><br><span style="color:#666">${o[1]}</span></div>
+        <span style="background:#777;color:white;border-radius:7px;padding:5px 10px;font-weight:700">hace ${mins} minutos</span>
+      </div>
+      <div style="font-size:18px;line-height:1.45;margin-top:16px">${o[2]}</div>
+      <div style="margin-top:16px;color:#2b8a57">● Usuario verificado</div>
+    </div>`;
+  }).join('');
+  demoOpinionOffset=(demoOpinionOffset+2)%demoOpinions.length;
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  renderDemoOpinions();
+  setInterval(renderDemoOpinions,8000);
+});
+
+
+function configureAppointmentDate(){
+  const input=document.getElementById('fechaCita') || document.querySelector('input[type="date"]');
+  if(!input)return;
+
+  const now=new Date();
+  now.setHours(0,0,0,0);
+  const min=new Date(now);
+  min.setDate(min.getDate()+7);
+
+  // If the first permitted day is Sunday, advance to Monday.
+  while(min.getDay()===0) min.setDate(min.getDate()+1);
+
+  const localISO=d=>{
+    const y=d.getFullYear();
+    const m=String(d.getMonth()+1).padStart(2,'0');
+    const day=String(d.getDate()).padStart(2,'0');
+    return `${y}-${m}-${day}`;
+  };
+  input.min=localISO(min);
+
+  input.addEventListener('change',function(){
+    if(!this.value)return;
+    const parts=this.value.split('-').map(Number);
+    const selected=new Date(parts[0],parts[1]-1,parts[2]);
+    if(selected < min){
+      alert('Seleccione una fecha disponible a partir de una semana.');
+      this.value='';
+      const hora=document.getElementById('hora');
+      if(hora) hora.selectedIndex=0;
+      return;
+    }
+    if(selected.getDay()===0){
+      alert('Los domingos no están disponibles.');
+      this.value='';
+      const hora=document.getElementById('hora');
+      if(hora) hora.selectedIndex=0;
+    }
+  });
+}
+document.addEventListener('DOMContentLoaded',configureAppointmentDate);
+
+
+document.addEventListener('change',function(e){
+  if(e.target && (e.target.classList.contains('tramiteVig') || e.target.id==='hora')){
+    setTimeout(updateBankDemoAmount,20);
+  }
+});
+document.addEventListener('DOMContentLoaded',function(){
+  setTimeout(updateBankDemoAmount,50);
+});
+
+</script>
+<script>
+(function(){
+  const months=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  const pad=n=>String(n).padStart(2,'0');
+  const iso=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+  const parse=v=>{if(!v)return null;const [y,m,d]=v.split('-').map(Number);return new Date(y,m-1,d)};
+  function initPrettyCalendar(){
+    const input=document.getElementById('fecha'), btn=document.getElementById('prettyDateButton'), pop=document.getElementById('prettyCalendar');
+    if(!input||!btn||!pop)return;
+    const text=document.getElementById('prettyDateText'), days=document.getElementById('calDays'), monthEl=document.getElementById('calMonth'), yearEl=document.getElementById('calYear');
+    let min=parse(input.min); if(!min){min=new Date();min.setHours(0,0,0,0);min.setDate(min.getDate()+7);while(min.getDay()===0)min.setDate(min.getDate()+1);input.min=iso(min)}
+    let view=parse(input.value)||new Date(min.getFullYear(),min.getMonth(),1);
+    const fmt=d=>new Intl.DateTimeFormat('es-MX',{weekday:'short',day:'numeric',month:'long',year:'numeric'}).format(d).replace(/^./,c=>c.toUpperCase());
+    function render(){
+      monthEl.textContent=months[view.getMonth()]; yearEl.textContent=view.getFullYear(); days.innerHTML='';
+      const first=new Date(view.getFullYear(),view.getMonth(),1), offset=(first.getDay()+6)%7, total=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+      for(let i=0;i<offset;i++){const b=document.createElement('span');b.className='blank';days.appendChild(b)}
+      const selected=parse(input.value), today=new Date();today.setHours(0,0,0,0);
+      for(let n=1;n<=total;n++){const d=new Date(view.getFullYear(),view.getMonth(),n), b=document.createElement('button');b.type='button';b.textContent=n;
+        const disabled=d<min||d.getDay()===0;b.disabled=disabled;
+        if(selected&&iso(d)===iso(selected))b.classList.add('selected'); if(iso(d)===iso(today))b.classList.add('today');
+        b.onclick=()=>{input.value=iso(d);input.dispatchEvent(new Event('change',{bubbles:true}));text.textContent=fmt(d);pop.classList.remove('open');btn.setAttribute('aria-expanded','false');render()}; days.appendChild(b)}
+    }
+    btn.onclick=()=>{const open=pop.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');if(open){view=parse(input.value)||new Date(min.getFullYear(),min.getMonth(),1);render()}};
+    document.getElementById('calPrev').onclick=()=>{view=new Date(view.getFullYear(),view.getMonth()-1,1);render()};
+    document.getElementById('calNext').onclick=()=>{view=new Date(view.getFullYear(),view.getMonth()+1,1);render()};
+    document.getElementById('calClear').onclick=()=>{input.value='';text.textContent='Selecciona una fecha';render()};
+    document.getElementById('calToday').onclick=()=>{view=new Date(min.getFullYear(),min.getMonth(),1);render()};
+    document.addEventListener('click',e=>{if(!pop.contains(e.target)&&!btn.contains(e.target)){pop.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
+    input.addEventListener('change',()=>{const d=parse(input.value);text.textContent=d?fmt(d):'Selecciona una fecha'});
+    render();
+  }
+  document.addEventListener('DOMContentLoaded',()=>setTimeout(initPrettyCalendar,0));
+})();
+</script>
+
+<script>
+function openMobileMenu(){
+  const menu=document.getElementById('mobileMenu');
+  if(!menu)return;
+  menu.classList.add('open');
+  menu.setAttribute('aria-hidden','false');
+  document.body.classList.add('menu-open');
+}
+function closeMobileMenu(){
+  const menu=document.getElementById('mobileMenu');
+  if(!menu)return;
+  menu.classList.remove('open');
+  menu.setAttribute('aria-hidden','true');
+  document.body.classList.remove('menu-open');
+}
+function menuGo(id){
+  closeMobileMenu();
+  if(typeof go==='function') go(id);
+}
+function menuScrollInfo(){
+  closeMobileMenu();
+  if(typeof go==='function') go('home');
+  setTimeout(()=>{
+    const el=document.querySelector('#home .info');
+    if(el) el.scrollIntoView({behavior:'smooth',block:'center'});
+  },80);
+}
+function menuScrollContact(){
+  closeMobileMenu();
+  if(typeof go==='function') go('home');
+  setTimeout(()=>{
+    const el=document.querySelector('#home .terms');
+    if(el) el.scrollIntoView({behavior:'smooth',block:'center'});
+  },80);
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape') closeMobileMenu();
+});
+</script>
+
+
+<script>
+function menuContact(){
+  closeMobileMenu();
+  alert('Esta es una maqueta educativa. Para información o contacto real, utilice únicamente los canales oficiales de la Secretaría de Relaciones Exteriores.');
+}
+</script>
+
+
+<script>
+function demoContactSubmit(e){
+  e.preventDefault();
+  alert('Mensaje de demostración. Este formulario no envía datos a ninguna dependencia.');
+}
+</script>
+
+</body></html>
